@@ -51,10 +51,7 @@ header {
   align-items: center;
   list-style: none;
   font-size: 20px;
-}
-
-.header-desktop ul li {
-  margin-left: 20px;
+  gap: 40px;
 }
 
 .header-desktop a {
