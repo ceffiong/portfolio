@@ -330,6 +330,27 @@ main,
   gap: 20px;
 }
 
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.socials > a:first-child {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  background-color: #ff8a00;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 /* Copyright */
 
 .copyright {
@@ -339,6 +360,11 @@ main,
   padding: 40px 10px;
   text-align: center;
   font-size: 16px;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Large devices (desktops, 992px and up) */
