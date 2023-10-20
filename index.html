@@ -18,15 +18,9 @@
                 <nav>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Portfolio</a></li>
-                        <li><a href="mailto:talkwithcharles@gmail.com"><img src="img/icons/mail_icon.png" alt="" /></a>
-                        </li>
-                        <li><a target="_blank" href="https://github.com/effiongcharles"><img
-                                    src="img/icons/github_icon.png" alt="" /></a></li>
-                        <li><a target="_blank" href="https://www.linkedin.com/in/ceffiong/"><img
-                                    src="img/icons/linkedin_icon.png" alt="" /></a></li>
-                        <li><a target="_blank" href="https://ceffiong.medium.com"><img src="img/icons/medium_icon.png"
-                                    alt="" /></a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a target="_blank" href="https://ceffiong.medium.com">Blog</a></li>
+                        <li><a class="nav-connect" href="#connect">Connect</a></li>
                     </ul>
                 </nav>
             </div>
@@ -43,29 +37,17 @@
                     <a href="javascript:void(0)" class="mobile-nav-close-btn" onclick="closeNav()">&times;</a>
                     <ul class="mobile-nav-ul">
                         <li class="mobile-nav-item" onclick="closeNav()"><a href="#home">Home</a></li>
-                        <li class="mobile-nav-item" onclick="closeNav()"><a href="#about">Portfolio</a></li>
-                    </ul>
-                    <ul class="mobile-nav-ul-nested">
-                        <li class="mobile-nav-item" onclick="closeNav()"><a href="mailto:talkwithcharles@gmail.com"><img
-                                    src="img/icons/mail_icon.png" alt="" /></a>
-                        </li>
+                        <li class="mobile-nav-item" onclick="closeNav()"><a href="#portfolio">Portfolio</a></li>
                         <li class="mobile-nav-item" onclick="closeNav()"><a target="_blank"
-                                href="https://github.com/effiongcharles"><img src="img/icons/github_icon.png"
-                                    alt="" /></a>
+                                href="https://ceffiong.medium.com">Blog</a>
                         </li>
-                        <li class="mobile-nav-item" onclick="closeNav()"><a target="_blank"
-                                href="https://www.linkedin.com/in/ceffiong/"><img src="img/icons/linkedin_icon.png"
-                                    alt="" /></a></li>
-                        <li class="mobile-nav-item" onclick="closeNav()"><a target="_blank"
-                                href="https://ceffiong.medium.com"><img src="img/icons/medium_icon.png" alt="" /></a>
-                        </li>
-
+                        <li class="mobile-nav-item" onclick="closeNav()"><a class="nav-connect"
+                                href="#connect">Connect</a></li>
                     </ul>
                 </div>
             </nav>
 
         </section>
-
     </header>
     <main>
         <section id="home" class="home">
@@ -76,7 +58,7 @@
 
                 <div>
                     <a href="#portfolio">See my work</a>
-                    <a href="mailto:talkwithcharles@gmail.com">Connect</a>
+                    <a href="#connect">Connect</a>
                 </div>
             </aside>
             <aside class="right">
@@ -169,7 +151,28 @@
 
             </div>
         </section>
+        <section class="connect" id="connect">
+            <div class="connect-top"><img src="img/contact_img.png" alt="Phone image"></div>
+            <h1 class="hero">Connect</h1>
+            <p class="subhero">I'm excited to connect and collaborate with you. Whether you have a project in mind, wish
+                to discuss web/mobile development, or simply want to drop a friendly "hello," I'm all ears.
+            </p>
+            <div class="socials">
+                <a href=""><img src="img/icons/mail_icon.png" alt="Email icon" /></a>
+                <a href=""><img src="img/icons/github_icon.png" alt="Github logo" /></a>
+                <a href=""><img src="img/icons/linkedin_icon.png" alt="Linkedin logo" /></a>
+                <a href=""><img src="img/icons/medium_icon.png" alt="Medium logo" /></a>
+            </div>
+        </section>
     </main>
+    <section class="copyright">
+        <div>©
+            <span id="copyright">
+                <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+            </span>
+            Charles, Innsbruck, Austria
+        </div>
+    </section>
 
     <img onclick="topFunction()" id="btn-top" src="img/icons/top.png" alt="Go to Top of Page" />
     <script src="js/script.js"></script>
