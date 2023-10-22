@@ -1,5 +1,6 @@
 // Animate on Scroll lib
 AOS.init({
+  once: false,
   mirror: true,
 });
 
