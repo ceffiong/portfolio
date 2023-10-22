@@ -168,7 +168,7 @@ main,
   color: #2e4b83;
   font-size: 60px;
   font-weight: 900;
-  font-family: Karma;
+  font-family: Gabarito;
 }
 
 .hero span {
@@ -204,10 +204,12 @@ main,
 
 .left div a:nth-child(1):hover {
   background-color: #536a97;
+  transform: translateY(-6%);
 }
 
 .left div a:nth-child(2):hover {
   background-color: #fa9c2e;
+  transform: translateY(-6%);
 }
 
 .left div a:nth-child(2) {
@@ -287,6 +289,7 @@ main,
 
 .card-btn:hover {
   background-color: #536a97;
+  transform: translateY(-6%);
 }
 
 /* Back to top icon */
@@ -346,6 +349,11 @@ main,
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.socials > a:first-child:hover {
+  background-color: #fa9c2e;
+  transform: translateY(-6%);
 }
 
 /* Copyright */
