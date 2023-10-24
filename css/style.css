@@ -64,7 +64,7 @@ header {
 
 .header-desktop a {
   text-decoration: none;
-  color: #262626;
+  color: #454545;
 }
 
 .header-desktop a:hover {
@@ -110,7 +110,7 @@ header {
 .mobile-nav-close-btn {
   font-size: 40px;
   font-weight: lighter;
-  color: #232323;
+  color: #454545;
   position: absolute;
   top: 0;
   right: 0;
