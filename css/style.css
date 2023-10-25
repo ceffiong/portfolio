@@ -210,17 +210,17 @@ main,
   width: 100px;
 }
 
-.left div a:nth-child(1):hover {
+.left div span:nth-child(1) a:hover {
   background-color: #536a97;
   transform: translateY(-6%);
 }
 
-.left div a:nth-child(2):hover {
+.left div span:nth-child(2) a:hover {
   background-color: #fa9c2e;
   transform: translateY(-6%);
 }
 
-.left div a:nth-child(2) {
+.left div span:nth-child(2) a {
   background-color: #ff8a00;
 }
 
