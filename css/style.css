@@ -381,7 +381,7 @@ main,
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 892px) {
+@media (min-width: 792px) {
   /* home */
   .home {
     flex-direction: row;
