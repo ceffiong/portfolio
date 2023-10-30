@@ -345,7 +345,7 @@ main,
   text-decoration: none;
 }
 
-.socials > a:first-child {
+.socials > span > a {
   font-size: 16px;
   color: white;
   text-decoration: none;
@@ -359,7 +359,7 @@ main,
   gap: 8px;
 }
 
-.socials > a:first-child:hover {
+.socials > span > a:hover {
   background-color: #fa9c2e;
   transform: translateY(-6%);
 }
