@@ -209,6 +209,10 @@ main,
   width: 100px;
 }
 
+.left div span a {
+  transition: transform 0.2s;
+}
+
 .left div span:nth-child(1) a:hover {
   background-color: #536a97;
   transform: translateY(-6%);
@@ -292,6 +296,7 @@ main,
   padding: 10px 15px;
   display: inline-block;
   margin-top: 26px;
+  transition: transform 0.2s;
 }
 
 .card-btn:hover {
@@ -325,6 +330,14 @@ main,
 .connect-top img {
   width: 100%;
   height: auto;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.connect-top img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
 }
 
 .connect p {
@@ -337,14 +350,17 @@ main,
   gap: 20px;
 }
 
-.socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+.socials span a img {
+  transition: transform 0.2s;
 }
 
-.socials > span > a {
+.socials span a img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+.socials .visit-blog-btn {
   font-size: 16px;
   color: white;
   text-decoration: none;
@@ -356,9 +372,10 @@ main,
   align-items: center;
   justify-content: center;
   gap: 8px;
+  transition: transform 0.2s;
 }
 
-.socials > span > a:hover {
+.socials .visit-blog-btn:hover {
   background-color: #fa9c2e;
   transform: translateY(-6%);
 }
