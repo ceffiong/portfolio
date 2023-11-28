@@ -51,6 +51,7 @@ header {
   color: #2e4b83;
   font-size: 62px;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .header-desktop ul {
