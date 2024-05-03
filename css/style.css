@@ -10,7 +10,7 @@ html {
 body {
   background-color: #f7f7f7;
   font-family: Karla, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   margin: 0;
   color: #454545;
 }
@@ -185,7 +185,7 @@ main,
 }
 
 .subhero {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   margin-top: 16px;
   max-width: 400px;

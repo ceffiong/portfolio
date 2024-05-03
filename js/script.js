@@ -12,6 +12,7 @@ let portfolioPage = document.getElementById("portfolio");
 let blogPage = document.getElementById("blog");
 let connectPage = document.getElementById("connect");
 let mobileNav = document.getElementById("mobile-nav");
+let mentorPage = document.getElementById("mentor");
 
 document.body.addEventListener(
   "click",
@@ -28,6 +29,7 @@ function openNav() {
   mybutton.style.display = "none";
   myNav.style.width = "250px";
   homePage.classList.add("no-event");
+  mentorPage.classList.add("no-event");
   portfolioPage.classList.add("no-event");
   blogPage.classList.add("no-event");
   connectPage.classList.add("no-event");
@@ -37,6 +39,7 @@ function openNav() {
 function closeNav() {
   myNav.style.width = "0";
   homePage.classList.remove("no-event");
+  mentorPage.classList.add("no-event");
   portfolioPage.classList.remove("no-event");
   blogPage.classList.remove("no-event");
   connectPage.classList.remove("no-event");
