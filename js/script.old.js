@@ -64,8 +64,22 @@ function topFunction() {
 document.addEventListener(
   "scroll",
   (event) => {
+    //document.getElementById("header").display = "none";
     scrollFunction();
     // handle scroll event
+    var currScrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    document.documentElement.scrollTop || document.body.scrollTop;
+    if (currScrollPosition > prevScrollPos) {
+      //scrolling down
+      //document.getElementById("header").style.transform = "translateY(-200px)";
+    } else if (currScrollPosition < prevScrollPos) {
+      //scrolling up
+      //document.getElementById("header").style.transform = "translateY(0)";
+    }
+
+    prevScrollPos = currScrollPosition;
   },
   { passive: true }
 );
