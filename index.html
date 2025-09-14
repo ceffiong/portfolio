@@ -14,325 +14,345 @@
 
 <body>
     <header id="header">
-        <section class="header-desktop" id="header-desktop">
-            <div>
-                <div class="logo">&lt;CE&gt;</div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#mentor">Mentoring</a></li>
-                        <li><a class="nav-connect" href="#connect">Connect</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-        </section>
-        <section class="header-mobile" id="header-mobile">
-            <div>
-                <div class="logo">&lt;CE&gt;</div>
-                <div><img onclick="openNav()" class="menu" src="img/menu.svg" alt="Menu" /></div>
-            </div>
-
-            <nav class="mobile-nav" id="mobile-nav">
-                <div class="mobile-nav-wrap">
-                    <a href="javascript:void(0)" class="mobile-nav-close-btn" onclick="closeNav()">&times;</a>
-                    <ul class="mobile-nav-ul">
-                        <li class="mobile-nav-item" onclick="closeNav()"><a href="#home">Home</a></li>
-                        <li class="mobile-nav-item" onclick="closeNav()"><a href="#portfolio">Portfolio</a></li>
-                        <li class="mobile-nav-item" onclick="closeNav()"><a href="#blog">Blog</a>
-                        <li class="mobile-nav-item" onclick="closeNav()"><a href="#mentor">Mentoring</a>
-                        </li>
-                        <li class="mobile-nav-item" onclick="closeNav()"><a class="nav-connect"
-                                href="#connect">Connect</a></li>
-                    </ul>
-                </div>
+        <div class="container">
+                        <a href="#" class="logo-container">
+                <div class="logo"></div>
+                <span>Charles Dev</span>
+            </a>
+            <nav class="header-desktop">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#mentor">Mentoring</a></li>
+                    <li><a class="nav-connect" href="#connect">Connect</a></li>
+                </ul>
             </nav>
-
-        </section>
+            <div class="header-mobile">
+                <img onclick="openNav()" class="menu" src="img/menu.svg" alt="Menu" />
+            </div>
+        </div>
     </header>
+
+    <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-wrap">
+            <a href="javascript:void(0)" class="mobile-nav-close-btn" onclick="closeNav()">&times;</a>
+            <ul class="mobile-nav-ul">
+                <li class="mobile-nav-item" onclick="closeNav()"><a href="#home">Home</a></li>
+                <li class="mobile-nav-item" onclick="closeNav()"><a href="#portfolio">Portfolio</a></li>
+                <li class="mobile-nav-item" onclick="closeNav()"><a href="#blog">Blog</a></li>
+                <li class="mobile-nav-item" onclick="closeNav()"><a href="#mentor">Mentoring</a></li>
+                <li class="mobile-nav-item" onclick="closeNav()"><a class="nav-connect" href="#connect">Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <main>
         <section id="home" class="home">
-            <aside class="left">
-                <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Hi, I'm a<br />
-                    Software
-                    <br /><span>Architect.</span>
-                </h1>
-                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm an independent Full-stack software
-                    architect/developer
-                    with
-                    experience developing
-                    scalable web/mobile applications.</p>
+            <div class="container">
+                <aside class="left">
+                    <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Hi, I'm a<br />
+                        Software
+                        <br /><span>Architect.</span>
+                    </h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm an independent Full-stack software
+                        architect/developer
+                        with
+                        experience developing
+                        scalable web/mobile and GenAI-driven applications.</p>
 
-                <div>
-                    <span data-aos="fade-right" data-aos-duration="1000">
-                        <a href="#portfolio">See my work</a>
+                    <div>
+                        <span data-aos="fade-right" data-aos-duration="1000">
+                            <a href="#portfolio">See my work</a>
+                        </span>
+                        <span data-aos="fade-left" data-aos-duration="1000">
+                            <a href="#connect">Connect</a>
+                        </span>
+                    </div>
+                </aside>
+                <aside class="right">
+                    <div class="hero-image-container" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="img/home.svg" alt="Image of a person coding">
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Portfolio</h1>
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">This portfolio showcases some of my projects.
+                    Let's connect and
+                    discuss how I can
+                    contribute to your next venture.</p>
+                <div class="portfolio-bottom">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/movie.png" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">Movie project</h2>
+                            <p class="card-text">I created this project in order to demonstrate a simple dynamic web
+                                application to
+                                Software Engineering Students at Masterschool. <br />
+                                <br /> <br />
+                                <b>Tech stack</b>: Python Flask, JSON, HTML5, Figma, Git/Github
+                            </p>
+                            <a target="_blank" href="https://ceffiong.pythonanywhere.com" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/portfolio.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">My portfolio website</h2>
+                            <p class="card-text">I developed my portfolio website. This site is a ”static website”
+                                which shows some of the projects that I have worked on.
+                                <br /> <br />
+                                <b>Tech stack</b>: Vanilla javascript, vanilla CSS and HTML, Figma, Git/Github - No
+                                framework
+                                was
+                                used in project.
+                            </p>
+                            <a target="_blank" href="#" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/citygeeks.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">Citygeeks Canada</h2>
+                            <p class="card-text">Citygeeks is an ecommerce and service provider website. I completely
+                                redesigned the site pages including landing, shop, about, contact pages.
+                                <br /> <br />
+                                <b>Tech stack</b>: Wordpress, Elementor, Woocommerce, CSS, HTML, Mysql database.
+                            </p>
+                            <a target="_blank" href="https://citygeeks.ca" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">Frouple</h2>
+                            <p class="card-text">Frouple is a mobile app that aims at connecting couples that share similar
+                                interests. App features includes real-time chats, couples feeds, auth...
+                                <br /> <br />
+                                <b>Tech stack</b>: Reactjs/React-Native, Expo, AWS (cognito, appsync, dynamodb, lamda, IAM,
+                                S3,
+                                Graphql API), js, Figma, Git/Github.
+                            </p>
+                            <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/taxihome.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">TaxiHome</h2>
+                            <p class="card-text">A taxi booking website for booking a private taxi in Hanoi, Vietnam.
+                                <br /> <br />
+                                <b>Tech stack</b>: Google location API, HTML, CSS, Javascript and PHP (for sending emails),
+                                Git/Github, CP
+                            </p>
+                            <a target="_blank" href="https://taxihome.vn" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">Frouple landing page</h2>
+                            <p class="card-text">A fully responsive and user friendly landing page for the Frouple mobile
+                                app.
+                                <br /> <br />
+                                <b>Tech stack</b>: Vanilla HTML, CSS and Javascript. AWS SES is used for sending email via
+                                contact form on the website, Figma, Git/Github.
+                            </p>
+                            <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/fluentino.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">Fluentino</h2>
+                            <p class="card-text">A language learning app that provides an informal and easy conversations
+                                with peers, mentored by a moderator. All anonymously! I worked on both front and backend.
+                                <br /> <br />
+                                <b>Tech stack</b>: Nextjs, js, HTML, CSS, Javascript, Django, Docker, Git/Github, Sendgrid,
+                                CI/CD, Redis,
+                                html, etc.
+                            </p>
+                            <a target="_blank" href="https://fluentino.com" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">Frouple admin</h2>
+                            <p class="card-text">This is an admin only website for carying out Frouple admin activities.
+                                This app uses the same backend as the mobile app with reactjs/css frontend. URL not provided
+                                for secrutiy reasons.
+                                <br /> <br />
+                                <b>Tech stack</b>: CI/CD with AWS, Reactjs, js, HTML, CSS, Bootstrap, Git/Github, AWS
+                                services.
+                            </p>
+                            <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/gloryworshipcentre.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">Glory Worship Centre Site</h2>
+                            <p class="card-text">This is the official website of Glory Worship Centre Church located in
+                                Innsbruck, Austria.
+                                <br /> <br />
+                                <b>Tech stack</b>: Vanilla js, Vanilla CSS, HTML, AWS SES for sending message via contact
+                                form, Git/Github.
+                            </p>
+                            <a target="_blank" href="http://gloryworshipcentre.at" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/personalitytest.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">Personality Test</h2>
+                            <p class="card-text">A simple static website helps you figure out if you are an introvert or an
+                                extrovert by answering some questions.
+                                <br /> <br />
+                                <b>Tech stack</b>: Vanilla js, JSON, Vanilla CSS, HTML, Git/Github.
+                            </p>
+                            <a target="_blank" href="https://ceffiong.github.io/personalitytest/" class="card-btn">Visit</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
+                        <img class="card-img" src="img/portfolio/blog.svg" alt="Project image">
+                        <div class="card-content">
+                            <h2 class="card-title">Multi-user blog</h2>
+                            <p class="card-text">A multi-user user blog platform similar Medium that is geard towards
+                                writing programming articles. <a target="_blank"
+                                    style="text-decoration: underline; color: #454545"
+                                    href="https://www.youtube.com/watch?v=8dAKnUdVMc0">App
+                                    demo</a>
+                                <br /> <br />
+                                <b>Tech stack</b>: Django, python, HTML, Bootstrap, CSS, Git/Github.
+                                services.
+                            </p>
+                            <a target="_blank" href="https://github.com/ceffiong/django_fullstack_multiuser_blog"
+                                class="card-btn">Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="connect">
+            <div class="container">
+                <div class="connect-top">
+                    <span data-aos="fade-down" data-aos-duration="1000">
+                        <img src="img/blog.svg" alt="Tablet image">
                     </span>
-                    <span data-aos="fade-left" data-aos-duration="1000">
-                        <a href="#connect">Connect</a>
+                </div>
+                <h1 data-aos="fade-up" class="hero">Blog</h1>
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I have published a number of interesting
+                    programming articles on <a target="_blank" style="color: #f7f7f7"
+                        href="https://ceffiong.medium.com/">Medium.</a> These
+                    articles
+                    covers topics such as
+                    full-stack
+                    web-development, databases and network programming. Go check them out, and don't forget to give me a
+                    👏clap, drop a ✍️ comment and ❤️ follow me for more updates.
+                </p>
+                <div class="socials">
+                    <span data-aos="fade-up" data-aos-duration="1000">
+                        <a class="visit-blog-btn" target="_blank" href="https://ceffiong.medium.com"> <img
+                                src="img/icons/medium_icon_white.svg" alt="Visit my blog" />
+                            <span>Visit my blog</span></a>
                     </span>
                 </div>
-            </aside>
-            <aside class="right">
-                <img data-aos="fade-left" data-aos-duration="1000" src="img/home.svg" alt="Image of a person coding">
-            </aside>
-        </section>
-        <section id="portfolio" class="portfolio" style="padding-top: 160px">
-            <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Portfolio</h1>
-            <p data-aos="fade-up" data-aos-duration="1000" class="subhero">This portfolio showcases some of my projects.
-                Let's connect and
-                discuss how I can
-                contribute to your next venture.</p>
-            <div class="portfolio-bottom">
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/movie.png" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">Movie project</h2>
-                        <p class="card-text">I created this project in order to demonstrate a simple dynamic web
-                            application to
-                            Software Engineering Students at Masterschool. <br />
-                            <br /> <br />
-                            <b>Tech stack</b>: Python Flask, JSON, HTML5, Figma, Git/Github
-                        </p>
-                        <a target="_blank" href="https://ceffiong.pythonanywhere.com" class="card-btn">Visit</a>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/portfolio.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">My portfolio website</h2>
-                        <p class="card-text">I developed my portfolio website. This site is a ”static website”
-                            which shows some of the projects that I have worked on.
-                            <br /> <br />
-                            <b>Tech stack</b>: Vanilla javascript, vanilla CSS and HTML, Figma, Git/Github - No
-                            framework
-                            was
-                            used in project.
-                        </p>
-                        <a target="_blank" href="#" class="card-btn">Visit</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/citygeeks.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">Citygeeks Canada</h2>
-                        <p class="card-text">Citygeeks is an ecommerce and service provider website. I completely
-                            redesigned the site pages including landing, shop, about, contact pages.
-                            <br /> <br />
-                            <b>Tech stack</b>: Wordpress, Elementor, Woocommerce, CSS, HTML, Mysql database.
-                        </p>
-                        <a target="_blank" href="https://citygeeks.ca" class="card-btn">Visit</a>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">Frouple</h2>
-                        <p class="card-text">Frouple is a mobile app that aims at connecting couples that share similar
-                            interests. App features includes real-time chats, couples feeds, auth...
-                            <br /> <br />
-                            <b>Tech stack</b>: Reactjs/React-Native, Expo, AWS (cognito, appsync, dynamodb, lamda, IAM,
-                            S3,
-                            Graphql API), js, Figma, Git/Github.
-                        </p>
-                        <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/taxihome.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">TaxiHome</h2>
-                        <p class="card-text">A taxi booking website for booking a private taxi in Hanoi, Vietnam.
-                            <br /> <br />
-                            <b>Tech stack</b>: Google location API, HTML, CSS, Javascript and PHP (for sending emails),
-                            Git/Github, CP
-                        </p>
-                        <a target="_blank" href="https://taxihome.vn" class="card-btn">Visit</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">Frouple landing page</h2>
-                        <p class="card-text">A fully responsive and user friendly landing page for the Frouple mobile
-                            app.
-                            <br /> <br />
-                            <b>Tech stack</b>: Vanilla HTML, CSS and Javascript. AWS SES is used for sending email via
-                            contact form on the website, Figma, Git/Github.
-                        </p>
-                        <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/fluentino.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">Fluentino</h2>
-                        <p class="card-text">A language learning app that provides an informal and easy conversations
-                            with peers, mentored by a moderator. All anonymously! I worked on both front and backend.
-                            <br /> <br />
-                            <b>Tech stack</b>: Nextjs, js, HTML, CSS, Javascript, Django, Docker, Git/Github, Sendgrid,
-                            CI/CD, Redis,
-                            html, etc.
-                        </p>
-                        <a target="_blank" href="https://fluentino.com" class="card-btn">Visit</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">Frouple admin</h2>
-                        <p class="card-text">This is an admin only website for carying out Frouple admin activities.
-                            This app uses the same backend as the mobile app with reactjs/css frontend. URL not provided
-                            for secrutiy reasons.
-                            <br /> <br />
-                            <b>Tech stack</b>: CI/CD with AWS, Reactjs, js, HTML, CSS, Bootstrap, Git/Github, AWS
-                            services.
-                        </p>
-                        <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/gloryworshipcentre.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">Glory Worship Centre Site</h2>
-                        <p class="card-text">This is the official website of Glory Worship Centre Church located in
-                            Innsbruck, Austria.
-                            <br /> <br />
-                            <b>Tech stack</b>: Vanilla js, Vanilla CSS, HTML, AWS SES for sending message via contact
-                            form, Git/Github.
-                        </p>
-                        <a target="_blank" href="http://gloryworshipcentre.at" class="card-btn">Visit</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/personalitytest.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">Personality Test</h2>
-                        <p class="card-text">A simple static website helps you figure out if you are an introvert or an
-                            extrovert by answering some questions.
-                            <br /> <br />
-                            <b>Tech stack</b>: Vanilla js, JSON, Vanilla CSS, HTML, Git/Github.
-                        </p>
-                        <a target="_blank" href="https://ceffiong.github.io/personalitytest/" class="card-btn">Visit</a>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                    <img class="card-img" src="img/portfolio/blog.svg" alt="Project image">
-                    <div class="card-content">
-                        <h2 class="card-title">Multi-user blog</h2>
-                        <p class="card-text">A multi-user user blog platform similar Medium that is geard towards
-                            writing programming articles. <a target="_blank"
-                                style="text-decoration: underline; color: #454545"
-                                href="https://www.youtube.com/watch?v=8dAKnUdVMc0">App
-                                demo</a>
-                            <br /> <br />
-                            <b>Tech stack</b>: Django, python, HTML, Bootstrap, CSS, Git/Github.
-                            services.
-                        </p>
-                        <a target="_blank" href="https://github.com/ceffiong/django_fullstack_multiuser_blog"
-                            class="card-btn">Visit</a>
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-        <section class="connect" id="blog">
-            <div class="connect-top">
-                <span data-aos="fade-down" data-aos-duration="1000">
-                    <img src="img/blog.svg" alt="Tablet image">
-                </span>
-            </div>
-            <h1 data-aos="fade-up" class="hero">Blog</h1>
-            <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I have published a number of interesting
-                programming articles on <a target="_blank" style="color: #454545"
-                    href="https://ceffiong.medium.com">Medium.</a> These
-                articles
-                covers topics such as
-                full-stack
-                web-development, databases and network programming. Go check them out, and don't forget to give me a
-                👏clap, drop a ✍️ comment and ❤️ follow me for more updates.
-            </p>
-            <div class="socials">
-                <span data-aos="fade-up" data-aos-duration="1000">
-                    <a class="visit-blog-btn" target="_blank" href="https://ceffiong.medium.com"> <img
-                            src="img/icons/medium_icon_white.svg" alt="Visit my blog" />
-                        <span>Visit my blog</span></a>
-                </span>
-
             </div>
         </section>
 
-        <section class="connect" id="mentor">
-            <div class="connect-top">
-                <span data-aos="fade-down" data-aos-duration="1000">
-                    <img src="img/mentoring.svg" alt="Tablet image">
-                </span>
-            </div>
-            <h1 data-aos="fade-up" class="hero">Mentoring</h1>
-            <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm currently a Software Engineering Lead
-                Mentor at <a style="color: #454545" class="visit-blog-btn" target="_blank"
-                    href="https://www.masterschool.com/">Masterschool</a>, where I provide one-on-one mentoring and
-                host live sessions for students. The program is a 14-month bootcamp designed to equip
-                aspiring
-                developers with the skills they need to land their first Software Engineering job. I'm passionate about
-                guiding the next generation of engineers and helping them build a strong foundation for their careers.
-            </p>
+        <section id="mentor" class="connect section-background">
+            <div class="container">
+                <div class="connect-top">
+                    <span data-aos="fade-down" data-aos-duration="1000">
+                        <img src="img/mentoring.svg" alt="Tablet image">
+                    </span>
+                </div>
+                <h1 data-aos="fade-up" class="hero">Mentoring</h1>
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm currently a Software Engineering Lead
+                    Mentor at <a style="color: #64ffda" target="_blank"
+                        href="https://www.masterschool.com/">Masterschool</a>, where I provide one-on-one mentoring and
+                    host live sessions for students. The program is a 14-month bootcamp designed to equip
+                    aspiring
+                    developers with the skills they need to land their first Software Engineering job. I'm passionate about
+                    guiding the next generation of engineers and helping them build a strong foundation for their careers.
+                </p>
 
-            <div class="socials">
-                <span data-aos="fade-up" data-aos-duration="1000">
-                    <a class="visit-blog-btn" target="_blank" href="https://ceffiong.medium.com">
-                        <span>Masterschool</span></a>
-                </span>
-
+                <div class="socials">
+                    <span data-aos="fade-up" data-aos-duration="1000">
+                        <a class="visit-blog-btn" target="_blank" href="https://www.masterschool.com/">
+                            <span>Masterschool</span></a>
+                    </span>
+                </div>
             </div>
         </section>
 
-        <section class="connect" id="connect">
-            <div class="connect-top">
-                <span data-aos="fade-down" data-aos-duration="1000">
-                    <img src="img/contact_img.svg" alt="Phone image">
-                </span>
+        <section id="connect" class="connect">
+            <div class="container">
+                <div class="connect-top">
+                    <span data-aos="fade-down" data-aos-duration="1000">
+                        <img src="img/contact_img.svg" alt="Phone image">
+                    </span>
+                </div>
+                <h1 data-aos="fade-up" class="hero">Connect</h1>
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm excited to connect and collaborate with
+                    you. Whether you have a
+                    project in mind, wish
+                    to discuss web/mobile development, or simply want to drop a friendly "hello," I'm all ears.
+                </p>
+
+                <form id="contact-form" class="contact-form" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+                <div class="socials">
+                    <span data-aos="fade-up" data-aos-duration="1000">
+                        <a href="mailto:contact@ceffiong.dev"> <img src="img/icons/email.svg" alt="Email icon" />
+                        </a>
+                    </span>
+                    <span data-aos="fade-up" data-aos-duration="1000">
+                        <a target="_blank" href="https://github.com/ceffiong"><img src="img/icons/github.svg"
+                                alt="Github logo" /></a>
+                    </span>
+                    <span data-aos="fade-up" data-aos-duration="1000">
+                        <a target="_blank" href="https://www.linkedin.com/in/ceffiong/"><img src="img/icons/linkedin.svg"
+                                alt="Linkedin logo" /></a>
+                    </span>
+                    <span data-aos="fade-up" data-aos-duration="1000">
+                        <a target="_blank" href="https://ceffiong.medium.com"><img src="img/icons/medium.svg"
+                                alt="Medium logo" /></a>
+                    </span>
+                </div>
             </div>
-            <h1 data-aos="fade-up" class="hero">Connect</h1>
-            <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm excited to connect and collaborate with
-                you. Whether you have a
-                project in mind, wish
-                to discuss web/mobile development, or simply want to drop a friendly "hello," I'm all ears.
-            </p>
-            <div class="socials">
-                <span data-aos="fade-up" data-aos-duration="1000">
-                    <a href="mailto:contact@ceffiong.dev"> <img src="img/icons/email.svg" alt="Email icon" />
-                    </a>
-                </span>
-                <span data-aos="fade-up" data-aos-duration="1000">
-                    <a target="_blank" href="https://github.com/ceffiong"><img src="img/icons/github.svg"
-                            alt="Github logo" /></a>
-                </span>
-                <span data-aos="fade-up" data-aos-duration="1000">
-                    <a target="_blank" href="https://www.linkedin.com/in/ceffiong/"><img src="img/icons/linkedin.svg"
-                            alt="Linkedin logo" /></a>
-                </span>
-                <span data-aos="fade-up" data-aos-duration="1000">
-                    <a target="_blank" href="https://ceffiong.medium.com"><img src="img/icons/medium.svg"
-                            alt="Medium logo" /></a>
-                </span>
-            </div>
-        </section>
+.
     </main>
-    <section class="copyright">
-        <div>©
+
+    <footer class="copyright">
+        <div class="container">
+            ©
             <span id="copyright">
                 <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
             </span>
-            Charles | <a href="mailto:contact@ceffiong.dev">contact@ceffiong.dev</a> | Innsbruck, Austria
+            Charles | <a href="mailto:contact@ceffiong.dev">contact@ceffiong.dev</a> | Linz, Austria
         </div>
-    </section>
+    </footer>
 
-    <img onclick="topFunction()" id="btn-top" src="img/icons/top.svg" alt="Go to Top of Page" />
+        <button onclick="topFunction()" id="btn-top"></button>
     <script src="js/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
