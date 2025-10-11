@@ -5,6 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charles - Passionate Web and Mobile Developer | Crafting Digital Excellence</title>
+    <meta name="description" content="Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications. Expert in React, Python, AWS, and modern development technologies.">
+    <meta name="keywords" content="Charles Effiong, Software Architect, Full-stack Developer, Web Development, Mobile Development, React, Python, AWS, GenAI, Portfolio">
+    <meta name="author" content="Charles Effiong">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ceffiong.dev/">
+    <meta property="og:title" content="Charles - Passionate Web and Mobile Developer | Crafting Digital Excellence">
+    <meta property="og:description" content="Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications.">
+    <meta property="og:image" content="https://ceffiong.dev/img/og-image.jpg">
+    <meta property="og:site_name" content="Charles Dev Portfolio">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ceffiong.dev/">
+    <meta property="twitter:title" content="Charles - Passionate Web and Mobile Developer | Crafting Digital Excellence">
+    <meta property="twitter:description" content="Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications.">
+    <meta property="twitter:image" content="https://ceffiong.dev/img/og-image.jpg">
+
+    <!-- Additional SEO -->
+    <link rel="canonical" href="https://ceffiong.dev/">
+    <meta name="theme-color" content="#64ffda">
+
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.svg?">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gabarito">
@@ -18,18 +42,20 @@
                         <a href="#" class="logo-container">
                 <div class="logo"></div>
                 <span>Charles Dev</span>
+                
             </a>
             <nav class="header-desktop">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#mentor">Mentoring</a></li>
                     <li><a class="nav-connect" href="#connect">Connect</a></li>
                 </ul>
             </nav>
-            <div class="header-mobile">
-                <img onclick="openNav()" class="menu" src="img/menu.svg" alt="Menu" />
+                <div class="header-mobile">
+                <img onclick="openNav()" class="menu" src="img/menu.svg" alt="Open navigation menu" />
             </div>
         </div>
     </header>
@@ -40,6 +66,7 @@
             <ul class="mobile-nav-ul">
                 <li class="mobile-nav-item" onclick="closeNav()"><a href="#home">Home</a></li>
                 <li class="mobile-nav-item" onclick="closeNav()"><a href="#portfolio">Portfolio</a></li>
+                <li class="mobile-nav-item" onclick="closeNav()"><a href="#skills">Skills</a></li>
                 <li class="mobile-nav-item" onclick="closeNav()"><a href="#blog">Blog</a></li>
                 <li class="mobile-nav-item" onclick="closeNav()"><a href="#mentor">Mentoring</a></li>
                 <li class="mobile-nav-item" onclick="closeNav()"><a class="nav-connect" href="#connect">Connect</a></li>
@@ -72,7 +99,7 @@
                 </aside>
                 <aside class="right">
                     <div class="hero-image-container" data-aos="fade-left" data-aos-duration="1000">
-                        <img src="img/home.svg" alt="Image of a person coding">
+                        <img src="img/home.svg" alt="Software developer working on laptop with code and development tools">
                     </div>
                 </aside>
             </div>
@@ -241,11 +268,92 @@
             </div>
         </section>
 
+        <section id="skills" class="skills">
+            <div class="container">
+                <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Skills & Technologies</h1>
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">Here are the technologies and tools I work with to bring ideas to life.</p>
+
+                <div class="skills-grid">
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000">
+                        <h3>Frontend</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">React</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">HTML5</span>
+                            <span class="skill-item">CSS</span>
+                            <span class="skill-item">Next.js</span>
+                            <span class="skill-item">React Native</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <h3>Backend</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">Django</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">FastAPI</span>
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">GraphQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">AWS</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">CI/CD</span>
+                            <span class="skill-item">Lambda</span>
+                            <span class="skill-item">S3</span>
+                            <span class="skill-item">DynamoDB</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <h3>GenAI & ML</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">AI Agents</span>
+                            <span class="skill-item">RAG Systems</span>
+                            <span class="skill-item">MCP Servers</span>
+                            <span class="skill-item">LangChain</span>
+                            <span class="skill-item">OpenAI API</span>
+                            <span class="skill-item">Vector Databases</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <h3>Tools & Others</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">Figma</span>
+                            <span class="skill-item">WordPress</span>
+                            <span class="skill-item">MySQL</span>
+                            <span class="skill-item">Redis</span>
+                            <span class="skill-item">Expo</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <h3>Soft Skills</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Communication</span>
+                            <span class="skill-item">Teaching</span>
+                            <span class="skill-item">Mentoring</span>
+                            <span class="skill-item">Leadership</span>
+                            <span class="skill-item">Problem Solving</span>
+                            <span class="skill-item">Technical Writing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="blog" class="connect">
             <div class="container">
                 <div class="connect-top">
                     <span data-aos="fade-down" data-aos-duration="1000">
-                        <img src="img/blog.svg" alt="Tablet image">
+                        <img src="img/blog.svg" alt="Modern tablet displaying blog content and articles">
                     </span>
                 </div>
                 <h1 data-aos="fade-up" class="hero">Blog</h1>
@@ -272,7 +380,7 @@
             <div class="container">
                 <div class="connect-top">
                     <span data-aos="fade-down" data-aos-duration="1000">
-                        <img src="img/mentoring.svg" alt="Tablet image">
+                        <img src="img/mentoring.svg" alt="Mentor and student collaboration in software development learning">
                     </span>
                 </div>
                 <h1 data-aos="fade-up" class="hero">Mentoring</h1>
@@ -298,7 +406,7 @@
             <div class="container">
                 <div class="connect-top">
                     <span data-aos="fade-down" data-aos-duration="1000">
-                        <img src="img/contact_img.svg" alt="Phone image">
+                        <img src="img/contact_img.svg" alt="Modern smartphone with communication and contact icons">
                     </span>
                 </div>
                 <h1 data-aos="fade-up" class="hero">Connect</h1>
@@ -322,20 +430,20 @@
                 </form>
                 <div class="socials">
                     <span data-aos="fade-up" data-aos-duration="1000">
-                        <a href="mailto:contact@ceffiong.dev"> <img src="img/icons/email.svg" alt="Email icon" />
+                        <a href="mailto:contact@ceffiong.dev"> <img src="img/icons/email.svg" alt="Send email to Charles" />
                         </a>
                     </span>
                     <span data-aos="fade-up" data-aos-duration="1000">
                         <a target="_blank" href="https://github.com/ceffiong"><img src="img/icons/github.svg"
-                                alt="Github logo" /></a>
+                                alt="Visit Charles's GitHub profile" /></a>
                     </span>
                     <span data-aos="fade-up" data-aos-duration="1000">
                         <a target="_blank" href="https://www.linkedin.com/in/ceffiong/"><img src="img/icons/linkedin.svg"
-                                alt="Linkedin logo" /></a>
+                                alt="Connect with Charles on LinkedIn" /></a>
                     </span>
                     <span data-aos="fade-up" data-aos-duration="1000">
                         <a target="_blank" href="https://ceffiong.medium.com"><img src="img/icons/medium.svg"
-                                alt="Medium logo" /></a>
+                                alt="Read Charles's articles on Medium" /></a>
                     </span>
                 </div>
             </div>
