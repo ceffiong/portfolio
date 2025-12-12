@@ -1,5 +1,95 @@
 AOS.init({
-    once: false,
+    once: true,
+});
+
+// Typewriter effect
+const typewriterElement = document.getElementById('typewriter');
+const lines = [
+    { text: "Hi, I'm a", hasSpan: false },
+    { text: "Software", hasSpan: false },
+    { text: "Architect.", hasSpan: true }
+];
+let lineIndex = 0;
+let charIndex = 0;
+
+function typeWriter() {
+    if (lineIndex < lines.length) {
+        const currentLine = lines[lineIndex];
+
+        if (charIndex < currentLine.text.length) {
+            const char = currentLine.text.charAt(charIndex);
+
+            if (charIndex === 0 && lineIndex > 0) {
+                typewriterElement.innerHTML += '<br />';
+            }
+
+            if (currentLine.hasSpan && charIndex === 0) {
+                typewriterElement.innerHTML += '<span>' + char;
+            } else if (currentLine.hasSpan && charIndex === currentLine.text.length - 1) {
+                const lastSpan = typewriterElement.lastChild;
+                if (lastSpan && lastSpan.tagName === 'SPAN') {
+                    lastSpan.textContent += char;
+                } else {
+                    typewriterElement.innerHTML += char;
+                }
+                typewriterElement.innerHTML += '</span>';
+            } else if (currentLine.hasSpan) {
+                const lastSpan = typewriterElement.lastChild;
+                if (lastSpan && lastSpan.tagName === 'SPAN') {
+                    lastSpan.textContent += char;
+                } else {
+                    typewriterElement.innerHTML += char;
+                }
+            } else {
+                typewriterElement.innerHTML += char;
+            }
+
+            charIndex++;
+            setTimeout(typeWriter, 100);
+        } else {
+            lineIndex++;
+            charIndex = 0;
+            setTimeout(typeWriter, 100);
+        }
+    }
+}
+
+// Start typewriter effect when page loads
+window.addEventListener('load', function() {
+    setTimeout(typeWriter, 500);
+});
+
+// Portfolio filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioCards = document.querySelectorAll('.portfolio-bottom .card');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const filterValue = this.getAttribute('data-filter');
+
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to clicked button
+        this.classList.add('active');
+
+        // Filter cards
+        portfolioCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+
+            if (filterValue === 'all' || category === filterValue) {
+                card.style.display = 'block';
+                // Reset AOS animation
+                card.classList.remove('aos-animate');
+                setTimeout(() => {
+                    card.classList.add('aos-animate');
+                }, 10);
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
 });
 
 let mybutton = document.getElementById("btn-top");

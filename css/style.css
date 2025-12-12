@@ -41,6 +41,17 @@ body {
   color: #64ffda;
 }
 
+.typewriter-cursor {
+  color: #64ffda;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 .subhero {
   font-size: 20px;
   font-weight: 400;
@@ -289,6 +300,44 @@ header .container {
   text-align: center;
 }
 
+.portfolio-filters {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-size: 16px;
+  color: #ccd6f6;
+  background-color: transparent;
+  border: 1px solid #ccd6f6;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "Karla", sans-serif;
+}
+
+.filter-btn:hover {
+  color: #64ffda;
+  border-color: #64ffda;
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.filter-btn.active {
+  color: #0a192f;
+  background-color: #64ffda;
+  border-color: #64ffda;
+}
+
+.filter-btn:focus {
+  outline: 2px solid #64ffda;
+  outline-offset: 2px;
+}
+
 .portfolio-bottom {
   margin-top: 48px;
   display: grid;
@@ -335,6 +384,34 @@ header .container {
   color: #e6f1ff;
   font-size: 22px;
   font-weight: 700;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-icons i {
+  font-size: 28px;
+  transition: transform 0.3s;
+}
+
+.tech-icon-svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+
+.tech-icon-svg path {
+  fill: #ccd6f6;
+}
+
+.tech-icons i:hover,
+.tech-icon-svg:hover {
+  transform: translateY(-3px) scale(1.1);
 }
 
 .card-text {

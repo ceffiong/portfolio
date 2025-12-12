@@ -34,6 +34,109 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gabarito">
     <link rel="stylesheet" href="css/style.css">
     <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Charles Effiong",
+        "url": "https://ceffiong.dev",
+        "jobTitle": "Software Architect",
+        "description": "Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications.",
+        "email": "contact@ceffiong.dev",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Linz",
+            "addressCountry": "Austria"
+        },
+        "sameAs": [
+            "https://github.com/ceffiong",
+            "https://www.linkedin.com/in/ceffiong/",
+            "https://ceffiong.medium.com"
+        ],
+        "knowsAbout": [
+            "React",
+            "Python",
+            "AWS",
+            "Full-stack Development",
+            "Mobile Development",
+            "GenAI",
+            "Django",
+            "JavaScript",
+            "Software Architecture"
+        ],
+        "alumniOf": {
+            "@type": "Organization",
+            "name": "Masterschool"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Masterschool",
+            "url": "https://www.masterschool.com/"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Charles Dev Portfolio",
+        "url": "https://ceffiong.dev",
+        "description": "Portfolio website showcasing web development, mobile development, and GenAI projects by Charles Effiong, Software Architect.",
+        "author": {
+            "@type": "Person",
+            "name": "Charles Effiong"
+        },
+        "inLanguage": "en"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Portfolio Projects",
+        "description": "Collection of web development, mobile development, and full-stack projects",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "CreativeWork",
+                    "name": "Frouple Mobile App",
+                    "description": "Mobile app connecting couples with similar interests featuring real-time chats and feeds",
+                    "url": "https://frouple.com",
+                    "keywords": "React Native, AWS, GraphQL, Mobile Development"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "CreativeWork",
+                    "name": "Fluentino Language Learning Platform",
+                    "description": "Language learning app providing informal conversations with peers and moderators",
+                    "url": "https://fluentino.com",
+                    "keywords": "Next.js, Django, Docker, Full-stack Development"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "CreativeWork",
+                    "name": "Multi-user Blog Platform",
+                    "description": "Blog platform similar to Medium for programming articles",
+                    "url": "https://github.com/ceffiong/django_fullstack_multiuser_blog",
+                    "keywords": "Django, Python, Bootstrap, Full-stack Development"
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -78,9 +181,7 @@
         <section id="home" class="home">
             <div class="container">
                 <aside class="left">
-                    <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Hi, I'm a<br />
-                        Software
-                        <br /><span>Architect.</span>
+                    <h1 data-aos="fade-up" data-aos-duration="1000" class="hero"><span id="typewriter"></span><span class="typewriter-cursor">|</span>
                     </h1>
                     <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm an independent Full-stack software
                         architect/developer
@@ -99,7 +200,7 @@
                 </aside>
                 <aside class="right">
                     <div class="hero-image-container" data-aos="fade-left" data-aos-duration="1000">
-                        <img src="img/home.svg" alt="Software developer working on laptop with code and development tools">
+                        <img src="img/home.svg" alt="Software developer working on laptop with code and development tools" loading="eager">
                     </div>
                 </aside>
             </div>
@@ -112,11 +213,26 @@
                     Let's connect and
                     discuss how I can
                     contribute to your next venture.</p>
+
+                <div class="portfolio-filters" data-aos="fade-up" data-aos-duration="1000">
+                    <button type="button" class="filter-btn active" data-filter="all">All</button>
+                    <button type="button" class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button type="button" class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button type="button" class="filter-btn" data-filter="fullstack">Full-stack</button>
+                </div>
+
                 <div class="portfolio-bottom">
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/movie.png" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="fullstack">
+                        <img class="card-img" src="img/portfolio/movie.png" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Movie project</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-python-plain colored" title="Python"></i>
+                                <i class="devicon-flask-original colored" title="Flask"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                                <i class="devicon-github-original" title="GitHub"></i>
+                            </div>
                             <p class="card-text">I created this project in order to demonstrate a simple dynamic web
                                 application to
                                 Software Engineering Students at Masterschool. <br />
@@ -127,11 +243,18 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/portfolio.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="frontend">
+                        <img class="card-img" src="img/portfolio/portfolio.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">My portfolio website</h2>
-                            <p class="card-text">I developed my portfolio website. This site is a ”static website”
+                            <div class="tech-icons">
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                                <i class="devicon-figma-plain colored" title="Figma"></i>
+                                <i class="devicon-github-original" title="GitHub"></i>
+                            </div>
+                            <p class="card-text">I developed my portfolio website. This site is a "static website"
                                 which shows some of the projects that I have worked on.
                                 <br /> <br />
                                 <b>Tech stack</b>: Vanilla javascript, vanilla CSS and HTML, Figma, Git/Github - No
@@ -142,10 +265,16 @@
                             <a target="_blank" href="#" class="card-btn">Visit</a>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/citygeeks.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="fullstack">
+                        <img class="card-img" src="img/portfolio/citygeeks.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Citygeeks Canada</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-wordpress-plain colored" title="WordPress"></i>
+                                <i class="devicon-mysql-plain colored" title="MySQL"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                            </div>
                             <p class="card-text">Citygeeks is an ecommerce and service provider website. I completely
                                 redesigned the site pages including landing, shop, about, contact pages.
                                 <br /> <br />
@@ -155,10 +284,20 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="mobile">
+                        <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Frouple</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-react-original colored" title="React"></i>
+                                <svg class="tech-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Expo">
+                                    <path d="M0.831 17.556c-.227.44.355 1.002 1.107 1.002.206 0 .376-.032.51-.094l14.199-7.316c.175-.092.306-.202.399-.325.118-.154.145-.347.082-.511-.062-.163-.202-.293-.38-.35-.077-.024-.165-.035-.262-.035-.177 0-.383.063-.58.177L1.706 17.42c-.178.104-.322.242-.422.408-.05.084-.084.175-.104.269-.02.093-.027.187-.02.282.006.095.028.187.065.274.037.088.092.168.166.236.074.069.17.122.284.151.113.03.244.039.38.013.136-.027.28-.095.427-.193L16.6 10.56c.218-.145.462-.244.716-.291.254-.047.517-.045.768.006.251.05.487.15.695.293.209.144.38.334.503.556.123.222.189.475.193.73.003.255-.055.509-.17.738-.115.229-.282.43-.487.589L3.613 22.184c-.372.276-.768.476-1.175.597-.407.122-.82.166-1.228.13-.409-.036-.809-.157-1.19-.361-.38-.204-.726-.492-1.027-.86-.301-.368-.545-.811-.727-1.321-.181-.51-.297-1.076-.342-1.694-.045-.618-.023-1.28.064-1.975.087-.694.23-1.412.425-2.143.194-.731.44-1.464.728-2.184.289-.72.616-1.418.972-2.084.356-.666.738-1.291 1.135-1.863.397-.573.807-1.086 1.22-1.529.412-.443.825-.809 1.228-1.087.404-.278.796-.465 1.167-.556.37-.09.712-.082 1.017.024.305.107.565.304.769.591.204.287.349.663.431 1.126.081.463.1.999.053 1.604-.047.605-.152 1.275-.313 1.998-.16.723-.368 1.491-.617 2.293-.25.802-.539 1.627-.86 2.463-.32.836-.664 1.673-1.022 2.497-.358.824-.727 1.628-1.1 2.397-.373.77-.751 1.497-1.127 2.17-.376.672-.744 1.285-1.097 1.827-.352.542-.685 1.008-.993 1.389z" fill="#000020"/>
+                                </svg>
+                                <i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
+                                <i class="devicon-graphql-plain colored" title="GraphQL"></i>
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-figma-plain colored" title="Figma"></i>
+                            </div>
                             <p class="card-text">Frouple is a mobile app that aims at connecting couples that share similar
                                 interests. App features includes real-time chats, couples feeds, auth...
                                 <br /> <br />
@@ -169,10 +308,16 @@
                             <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/taxihome.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="fullstack">
+                        <img class="card-img" src="img/portfolio/taxihome.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">TaxiHome</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                                <i class="devicon-php-plain colored" title="PHP"></i>
+                            </div>
                             <p class="card-text">A taxi booking website for booking a private taxi in Hanoi, Vietnam.
                                 <br /> <br />
                                 <b>Tech stack</b>: Google location API, HTML, CSS, Javascript and PHP (for sending emails),
@@ -181,10 +326,16 @@
                             <a target="_blank" href="https://taxihome.vn" class="card-btn">Visit</a>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="frontend">
+                        <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Frouple landing page</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                                <i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
+                            </div>
                             <p class="card-text">A fully responsive and user friendly landing page for the Frouple mobile
                                 app.
                                 <br /> <br />
@@ -194,10 +345,17 @@
                             <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/fluentino.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="fullstack">
+                        <img class="card-img" src="img/portfolio/fluentino.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Fluentino</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-nextjs-original" title="Next.js"></i>
+                                <i class="devicon-django-plain colored" title="Django"></i>
+                                <i class="devicon-docker-plain colored" title="Docker"></i>
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-redis-plain colored" title="Redis"></i>
+                            </div>
                             <p class="card-text">A language learning app that provides an informal and easy conversations
                                 with peers, mentored by a moderator. All anonymously! I worked on both front and backend.
                                 <br /> <br />
@@ -208,10 +366,17 @@
                             <a target="_blank" href="https://fluentino.com" class="card-btn">Visit</a>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="fullstack">
+                        <img class="card-img" src="img/portfolio/frouple.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Frouple admin</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-react-original colored" title="React"></i>
+                                <i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                            </div>
                             <p class="card-text">This is an admin only website for carying out Frouple admin activities.
                                 This app uses the same backend as the mobile app with reactjs/css frontend. URL not provided
                                 for secrutiy reasons.
@@ -222,10 +387,16 @@
                             <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/gloryworshipcentre.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="frontend">
+                        <img class="card-img" src="img/portfolio/gloryworshipcentre.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Glory Worship Centre Site</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                                <i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
+                            </div>
                             <p class="card-text">This is the official website of Glory Worship Centre Church located in
                                 Innsbruck, Austria.
                                 <br /> <br />
@@ -235,10 +406,16 @@
                             <a target="_blank" href="http://gloryworshipcentre.at" class="card-btn">Visit</a>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/personalitytest.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="frontend">
+                        <img class="card-img" src="img/portfolio/personalitytest.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Personality Test</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                                <i class="devicon-github-original" title="GitHub"></i>
+                            </div>
                             <p class="card-text">A simple static website helps you figure out if you are an introvert or an
                                 extrovert by answering some questions.
                                 <br /> <br />
@@ -247,10 +424,17 @@
                             <a target="_blank" href="https://ceffiong.github.io/personalitytest/" class="card-btn">Visit</a>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" class="card">
-                        <img class="card-img" src="img/portfolio/blog.svg" alt="Project image">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="fullstack">
+                        <img class="card-img" src="img/portfolio/blog.svg" alt="Project image" loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Multi-user blog</h2>
+                            <div class="tech-icons">
+                                <i class="devicon-django-plain colored" title="Django"></i>
+                                <i class="devicon-python-plain colored" title="Python"></i>
+                                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                                <i class="devicon-bootstrap-plain colored" title="Bootstrap"></i>
+                            </div>
                             <p class="card-text">A multi-user user blog platform similar Medium that is geard towards
                                 writing programming articles. <a target="_blank"
                                     style="text-decoration: underline; color: #454545"
@@ -283,6 +467,7 @@
                             <span class="skill-item">CSS</span>
                             <span class="skill-item">Next.js</span>
                             <span class="skill-item">React Native</span>
+                            <span class="skill-item">Bootstrap</span>
                         </div>
                     </div>
 
@@ -294,6 +479,7 @@
                             <span class="skill-item">Flask</span>
                             <span class="skill-item">FastAPI</span>
                             <span class="skill-item">Node.js</span>
+                            <span class="skill-item">PHP</span>
                             <span class="skill-item">GraphQL</span>
                         </div>
                     </div>
@@ -353,7 +539,7 @@
             <div class="container">
                 <div class="connect-top">
                     <span data-aos="fade-down" data-aos-duration="1000">
-                        <img src="img/blog.svg" alt="Modern tablet displaying blog content and articles">
+                        <img src="img/blog.svg" alt="Modern tablet displaying blog content and articles" loading="lazy">
                     </span>
                 </div>
                 <h1 data-aos="fade-up" class="hero">Blog</h1>
@@ -369,7 +555,7 @@
                 <div class="socials">
                     <span data-aos="fade-up" data-aos-duration="1000">
                         <a class="visit-blog-btn" target="_blank" href="https://ceffiong.medium.com"> <img
-                                src="img/icons/medium_icon_white.svg" alt="Visit my blog" />
+                                src="img/icons/medium_icon_white.svg" alt="Visit my blog" loading="lazy" />
                             <span>Visit my blog</span></a>
                     </span>
                 </div>
@@ -380,7 +566,7 @@
             <div class="container">
                 <div class="connect-top">
                     <span data-aos="fade-down" data-aos-duration="1000">
-                        <img src="img/mentoring.svg" alt="Mentor and student collaboration in software development learning">
+                        <img src="img/mentoring.svg" alt="Mentor and student collaboration in software development learning" loading="lazy">
                     </span>
                 </div>
                 <h1 data-aos="fade-up" class="hero">Mentoring</h1>
@@ -406,7 +592,7 @@
             <div class="container">
                 <div class="connect-top">
                     <span data-aos="fade-down" data-aos-duration="1000">
-                        <img src="img/contact_img.svg" alt="Modern smartphone with communication and contact icons">
+                        <img src="img/contact_img.svg" alt="Modern smartphone with communication and contact icons" loading="lazy">
                     </span>
                 </div>
                 <h1 data-aos="fade-up" class="hero">Connect</h1>
@@ -430,20 +616,20 @@
                 </form>
                 <div class="socials">
                     <span data-aos="fade-up" data-aos-duration="1000">
-                        <a href="mailto:contact@ceffiong.dev"> <img src="img/icons/email.svg" alt="Send email to Charles" />
+                        <a href="mailto:contact@ceffiong.dev"> <img src="img/icons/email.svg" alt="Send email to Charles" loading="lazy" />
                         </a>
                     </span>
                     <span data-aos="fade-up" data-aos-duration="1000">
                         <a target="_blank" href="https://github.com/ceffiong"><img src="img/icons/github.svg"
-                                alt="Visit Charles's GitHub profile" /></a>
+                                alt="Visit Charles's GitHub profile" loading="lazy" /></a>
                     </span>
                     <span data-aos="fade-up" data-aos-duration="1000">
                         <a target="_blank" href="https://www.linkedin.com/in/ceffiong/"><img src="img/icons/linkedin.svg"
-                                alt="Connect with Charles on LinkedIn" /></a>
+                                alt="Connect with Charles on LinkedIn" loading="lazy" /></a>
                     </span>
                     <span data-aos="fade-up" data-aos-duration="1000">
                         <a target="_blank" href="https://ceffiong.medium.com"><img src="img/icons/medium.svg"
-                                alt="Read Charles's articles on Medium" /></a>
+                                alt="Read Charles's articles on Medium" loading="lazy" /></a>
                     </span>
                 </div>
             </div>
