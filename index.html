@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charles - Passionate Web and Mobile Developer | Crafting Digital Excellence</title>
-    <meta name="description" content="Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications. Expert in React, Python, AWS, and modern development technologies.">
-    <meta name="keywords" content="Charles Effiong, Software Architect, Full-stack Developer, Web Development, Mobile Development, React, Python, AWS, GenAI, Portfolio">
+    <meta name="description"
+        content="Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications. Expert in React, Python, AWS, and modern development technologies.">
+    <meta name="keywords"
+        content="Charles Effiong, Software Architect, Full-stack Developer, Web Development, Mobile Development, React, Python, AWS, GenAI, Portfolio">
     <meta name="author" content="Charles Effiong">
     <meta name="robots" content="index, follow">
 
@@ -14,15 +16,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ceffiong.dev/">
     <meta property="og:title" content="Charles - Passionate Web and Mobile Developer | Crafting Digital Excellence">
-    <meta property="og:description" content="Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications.">
+    <meta property="og:description"
+        content="Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications.">
     <meta property="og:image" content="https://ceffiong.dev/img/og-image.jpg">
     <meta property="og:site_name" content="Charles Dev Portfolio">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ceffiong.dev/">
-    <meta property="twitter:title" content="Charles - Passionate Web and Mobile Developer | Crafting Digital Excellence">
-    <meta property="twitter:description" content="Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications.">
+    <meta property="twitter:title"
+        content="Charles - Passionate Web and Mobile Developer | Crafting Digital Excellence">
+    <meta property="twitter:description"
+        content="Independent Full-stack Software Architect & Developer specializing in scalable web/mobile and GenAI-driven applications.">
     <meta property="twitter:image" content="https://ceffiong.dev/img/og-image.jpg">
 
     <!-- Additional SEO -->
@@ -142,10 +147,10 @@
 <body>
     <header id="header">
         <div class="container">
-                        <a href="#" class="logo-container">
+            <a href="#" class="logo-container">
                 <div class="logo"></div>
                 <span>Charles Dev</span>
-                
+
             </a>
             <nav class="header-desktop">
                 <ul>
@@ -157,7 +162,7 @@
                     <li><a class="nav-connect" href="#connect">Connect</a></li>
                 </ul>
             </nav>
-                <div class="header-mobile">
+            <div class="header-mobile">
                 <img onclick="openNav()" class="menu" src="img/menu.svg" alt="Open navigation menu" />
             </div>
         </div>
@@ -181,26 +186,58 @@
         <section id="home" class="home">
             <div class="container">
                 <aside class="left">
-                    <h1 data-aos="fade-up" data-aos-duration="1000" class="hero"><span id="typewriter"></span><span class="typewriter-cursor">|</span>
-                    </h1>
-                    <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm an independent Full-stack software
-                        architect/developer
-                        with
-                        experience developing
-                        scalable web/mobile and GenAI-driven applications.</p>
+                    <div class="greeting" data-aos="fade-up" data-aos-duration="1000">
+                        <span class="wave">👋</span>
+                        <span class="greeting-text">Hi, I'm Charles</span>
+                    </div>
 
-                    <div>
-                        <span data-aos="fade-right" data-aos-duration="1000">
-                            <a href="#portfolio">See my work</a>
-                        </span>
-                        <span data-aos="fade-left" data-aos-duration="1000">
-                            <a href="#connect">Connect</a>
-                        </span>
+                    <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="hero">
+                        <span class="hero-main"><span id="typewriter"></span><span
+                                class="typewriter-cursor">|</span></span>
+                        <span class="hero-sub">Building the Future with Code & AI</span>
+                    </h1>
+
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="subhero">
+                        I craft scalable web and mobile applications with a focus on modern technologies, clean architecture,
+                        and AI-driven solutions. Currently mentoring the next generation of developers at Masterschool.
+                    </p>
+
+                    <div class="hero-cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <a href="#portfolio" class="cta-primary">
+                            <span>View My Work</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#connect" class="cta-secondary">
+                            <span>Let's Connect</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-divider-home"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-divider-home"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Tech Articles</span>
+                        </div>
                     </div>
                 </aside>
+
                 <aside class="right">
-                    <div class="hero-image-container" data-aos="fade-left" data-aos-duration="1000">
-                        <img src="img/home.svg" alt="Software developer working on laptop with code and development tools" loading="eager">
+                    <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="image-decoration"></div>
+                        <img src="img/home.svg"
+                            alt="Software developer working on laptop with code and development tools" loading="eager">
                     </div>
                 </aside>
             </div>
@@ -209,7 +246,8 @@
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Portfolio</h1>
-                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">This portfolio showcases some of my projects.
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">This portfolio showcases some of my
+                    projects.
                     Let's connect and
                     discuss how I can
                     contribute to your next venture.</p>
@@ -290,18 +328,23 @@
                             <h2 class="card-title">Frouple</h2>
                             <div class="tech-icons">
                                 <i class="devicon-react-original colored" title="React"></i>
-                                <svg class="tech-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Expo">
-                                    <path d="M0.831 17.556c-.227.44.355 1.002 1.107 1.002.206 0 .376-.032.51-.094l14.199-7.316c.175-.092.306-.202.399-.325.118-.154.145-.347.082-.511-.062-.163-.202-.293-.38-.35-.077-.024-.165-.035-.262-.035-.177 0-.383.063-.58.177L1.706 17.42c-.178.104-.322.242-.422.408-.05.084-.084.175-.104.269-.02.093-.027.187-.02.282.006.095.028.187.065.274.037.088.092.168.166.236.074.069.17.122.284.151.113.03.244.039.38.013.136-.027.28-.095.427-.193L16.6 10.56c.218-.145.462-.244.716-.291.254-.047.517-.045.768.006.251.05.487.15.695.293.209.144.38.334.503.556.123.222.189.475.193.73.003.255-.055.509-.17.738-.115.229-.282.43-.487.589L3.613 22.184c-.372.276-.768.476-1.175.597-.407.122-.82.166-1.228.13-.409-.036-.809-.157-1.19-.361-.38-.204-.726-.492-1.027-.86-.301-.368-.545-.811-.727-1.321-.181-.51-.297-1.076-.342-1.694-.045-.618-.023-1.28.064-1.975.087-.694.23-1.412.425-2.143.194-.731.44-1.464.728-2.184.289-.72.616-1.418.972-2.084.356-.666.738-1.291 1.135-1.863.397-.573.807-1.086 1.22-1.529.412-.443.825-.809 1.228-1.087.404-.278.796-.465 1.167-.556.37-.09.712-.082 1.017.024.305.107.565.304.769.591.204.287.349.663.431 1.126.081.463.1.999.053 1.604-.047.605-.152 1.275-.313 1.998-.16.723-.368 1.491-.617 2.293-.25.802-.539 1.627-.86 2.463-.32.836-.664 1.673-1.022 2.497-.358.824-.727 1.628-1.1 2.397-.373.77-.751 1.497-1.127 2.17-.376.672-.744 1.285-1.097 1.827-.352.542-.685 1.008-.993 1.389z" fill="#000020"/>
+                                <svg class="tech-icon-svg" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" title="Expo">
+                                    <path
+                                        d="M0.831 17.556c-.227.44.355 1.002 1.107 1.002.206 0 .376-.032.51-.094l14.199-7.316c.175-.092.306-.202.399-.325.118-.154.145-.347.082-.511-.062-.163-.202-.293-.38-.35-.077-.024-.165-.035-.262-.035-.177 0-.383.063-.58.177L1.706 17.42c-.178.104-.322.242-.422.408-.05.084-.084.175-.104.269-.02.093-.027.187-.02.282.006.095.028.187.065.274.037.088.092.168.166.236.074.069.17.122.284.151.113.03.244.039.38.013.136-.027.28-.095.427-.193L16.6 10.56c.218-.145.462-.244.716-.291.254-.047.517-.045.768.006.251.05.487.15.695.293.209.144.38.334.503.556.123.222.189.475.193.73.003.255-.055.509-.17.738-.115.229-.282.43-.487.589L3.613 22.184c-.372.276-.768.476-1.175.597-.407.122-.82.166-1.228.13-.409-.036-.809-.157-1.19-.361-.38-.204-.726-.492-1.027-.86-.301-.368-.545-.811-.727-1.321-.181-.51-.297-1.076-.342-1.694-.045-.618-.023-1.28.064-1.975.087-.694.23-1.412.425-2.143.194-.731.44-1.464.728-2.184.289-.72.616-1.418.972-2.084.356-.666.738-1.291 1.135-1.863.397-.573.807-1.086 1.22-1.529.412-.443.825-.809 1.228-1.087.404-.278.796-.465 1.167-.556.37-.09.712-.082 1.017.024.305.107.565.304.769.591.204.287.349.663.431 1.126.081.463.1.999.053 1.604-.047.605-.152 1.275-.313 1.998-.16.723-.368 1.491-.617 2.293-.25.802-.539 1.627-.86 2.463-.32.836-.664 1.673-1.022 2.497-.358.824-.727 1.628-1.1 2.397-.373.77-.751 1.497-1.127 2.17-.376.672-.744 1.285-1.097 1.827-.352.542-.685 1.008-.993 1.389z"
+                                        fill="#000020" />
                                 </svg>
                                 <i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
                                 <i class="devicon-graphql-plain colored" title="GraphQL"></i>
                                 <i class="devicon-javascript-plain colored" title="JavaScript"></i>
                                 <i class="devicon-figma-plain colored" title="Figma"></i>
                             </div>
-                            <p class="card-text">Frouple is a mobile app that aims at connecting couples that share similar
+                            <p class="card-text">Frouple is a mobile app that aims at connecting couples that share
+                                similar
                                 interests. App features includes real-time chats, couples feeds, auth...
                                 <br /> <br />
-                                <b>Tech stack</b>: Reactjs/React-Native, Expo, AWS (cognito, appsync, dynamodb, lamda, IAM,
+                                <b>Tech stack</b>: Reactjs/React-Native, Expo, AWS (cognito, appsync, dynamodb, lamda,
+                                IAM,
                                 S3,
                                 Graphql API), js, Figma, Git/Github.
                             </p>
@@ -320,7 +363,8 @@
                             </div>
                             <p class="card-text">A taxi booking website for booking a private taxi in Hanoi, Vietnam.
                                 <br /> <br />
-                                <b>Tech stack</b>: Google location API, HTML, CSS, Javascript and PHP (for sending emails),
+                                <b>Tech stack</b>: Google location API, HTML, CSS, Javascript and PHP (for sending
+                                emails),
                                 Git/Github, CP
                             </p>
                             <a target="_blank" href="https://taxihome.vn" class="card-btn">Visit</a>
@@ -336,10 +380,12 @@
                                 <i class="devicon-css3-plain colored" title="CSS3"></i>
                                 <i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
                             </div>
-                            <p class="card-text">A fully responsive and user friendly landing page for the Frouple mobile
+                            <p class="card-text">A fully responsive and user friendly landing page for the Frouple
+                                mobile
                                 app.
                                 <br /> <br />
-                                <b>Tech stack</b>: Vanilla HTML, CSS and Javascript. AWS SES is used for sending email via
+                                <b>Tech stack</b>: Vanilla HTML, CSS and Javascript. AWS SES is used for sending email
+                                via
                                 contact form on the website, Figma, Git/Github.
                             </p>
                             <a target="_blank" href="https://frouple.com" class="card-btn">Visit</a>
@@ -356,10 +402,13 @@
                                 <i class="devicon-javascript-plain colored" title="JavaScript"></i>
                                 <i class="devicon-redis-plain colored" title="Redis"></i>
                             </div>
-                            <p class="card-text">A language learning app that provides an informal and easy conversations
-                                with peers, mentored by a moderator. All anonymously! I worked on both front and backend.
+                            <p class="card-text">A language learning app that provides an informal and easy
+                                conversations
+                                with peers, mentored by a moderator. All anonymously! I worked on both front and
+                                backend.
                                 <br /> <br />
-                                <b>Tech stack</b>: Nextjs, js, HTML, CSS, Javascript, Django, Docker, Git/Github, Sendgrid,
+                                <b>Tech stack</b>: Nextjs, js, HTML, CSS, Javascript, Django, Docker, Git/Github,
+                                Sendgrid,
                                 CI/CD, Redis,
                                 html, etc.
                             </p>
@@ -378,7 +427,8 @@
                                 <i class="devicon-css3-plain colored" title="CSS3"></i>
                             </div>
                             <p class="card-text">This is an admin only website for carying out Frouple admin activities.
-                                This app uses the same backend as the mobile app with reactjs/css frontend. URL not provided
+                                This app uses the same backend as the mobile app with reactjs/css frontend. URL not
+                                provided
                                 for secrutiy reasons.
                                 <br /> <br />
                                 <b>Tech stack</b>: CI/CD with AWS, Reactjs, js, HTML, CSS, Bootstrap, Git/Github, AWS
@@ -388,7 +438,8 @@
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="frontend">
-                        <img class="card-img" src="img/portfolio/gloryworshipcentre.svg" alt="Project image" loading="lazy">
+                        <img class="card-img" src="img/portfolio/gloryworshipcentre.svg" alt="Project image"
+                            loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Glory Worship Centre Site</h2>
                             <div class="tech-icons">
@@ -400,14 +451,16 @@
                             <p class="card-text">This is the official website of Glory Worship Centre Church located in
                                 Innsbruck, Austria.
                                 <br /> <br />
-                                <b>Tech stack</b>: Vanilla js, Vanilla CSS, HTML, AWS SES for sending message via contact
+                                <b>Tech stack</b>: Vanilla js, Vanilla CSS, HTML, AWS SES for sending message via
+                                contact
                                 form, Git/Github.
                             </p>
                             <a target="_blank" href="http://gloryworshipcentre.at" class="card-btn">Visit</a>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="frontend">
-                        <img class="card-img" src="img/portfolio/personalitytest.svg" alt="Project image" loading="lazy">
+                        <img class="card-img" src="img/portfolio/personalitytest.svg" alt="Project image"
+                            loading="lazy">
                         <div class="card-content">
                             <h2 class="card-title">Personality Test</h2>
                             <div class="tech-icons">
@@ -416,12 +469,14 @@
                                 <i class="devicon-css3-plain colored" title="CSS3"></i>
                                 <i class="devicon-github-original" title="GitHub"></i>
                             </div>
-                            <p class="card-text">A simple static website helps you figure out if you are an introvert or an
+                            <p class="card-text">A simple static website helps you figure out if you are an introvert or
+                                an
                                 extrovert by answering some questions.
                                 <br /> <br />
                                 <b>Tech stack</b>: Vanilla js, JSON, Vanilla CSS, HTML, Git/Github.
                             </p>
-                            <a target="_blank" href="https://ceffiong.github.io/personalitytest/" class="card-btn">Visit</a>
+                            <a target="_blank" href="https://ceffiong.github.io/personalitytest/"
+                                class="card-btn">Visit</a>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1000" class="card" data-category="fullstack">
@@ -455,198 +510,394 @@
         <section id="skills" class="skills">
             <div class="container">
                 <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Skills & Technologies</h1>
-                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">Here are the technologies and tools I work with to bring ideas to life.</p>
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">Here are the technologies and tools I
+                    work with to bring ideas to life.</p>
 
                 <div class="skills-grid">
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000">
-                        <h3>Frontend</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">React</span>
-                            <span class="skill-item">JavaScript</span>
-                            <span class="skill-item">HTML5</span>
-                            <span class="skill-item">CSS</span>
-                            <span class="skill-item">Next.js</span>
-                            <span class="skill-item">React Native</span>
-                            <span class="skill-item">Bootstrap</span>
+                    <div class="skill-card skill-card-featured" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">🤖</div>
+                            <h3>GenAI & ML</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AI Agents</span>
+                            <span class="skill-tag">RAG Systems</span>
+                            <span class="skill-tag">MCP Servers</span>
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">OpenAI API</span>
+                            <span class="skill-tag">Vector Databases</span>
+                            <span class="skill-tag">Claude Code</span>
+                            <span class="skill-tag">Claude Skill</span>
                         </div>
                     </div>
 
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <h3>Backend</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">Django</span>
-                            <span class="skill-item">Flask</span>
-                            <span class="skill-item">FastAPI</span>
-                            <span class="skill-item">Node.js</span>
-                            <span class="skill-item">PHP</span>
-                            <span class="skill-item">GraphQL</span>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">💻</div>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">Bootstrap</span>
                         </div>
                     </div>
 
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <h3>Cloud & DevOps</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">AWS</span>
-                            <span class="skill-item">Docker</span>
-                            <span class="skill-item">CI/CD</span>
-                            <span class="skill-item">Lambda</span>
-                            <span class="skill-item">S3</span>
-                            <span class="skill-item">DynamoDB</span>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">⚙️</div>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">GraphQL</span>
                         </div>
                     </div>
 
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <h3>GenAI & ML</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">AI Agents</span>
-                            <span class="skill-item">RAG Systems</span>
-                            <span class="skill-item">MCP Servers</span>
-                            <span class="skill-item">LangChain</span>
-                            <span class="skill-item">OpenAI API</span>
-                            <span class="skill-item">Vector Databases</span>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">☁️</div>
+                            <h3>Cloud & DevOps</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">Lambda</span>
+                            <span class="skill-tag">S3</span>
+                            <span class="skill-tag">DynamoDB</span>
                         </div>
                     </div>
 
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <h3>Tools & Others</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">Git</span>
-                            <span class="skill-item">Figma</span>
-                            <span class="skill-item">WordPress</span>
-                            <span class="skill-item">MySQL</span>
-                            <span class="skill-item">Redis</span>
-                            <span class="skill-item">Expo</span>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">🛠️</div>
+                            <h3>Tools & Others</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">Expo</span>
                         </div>
                     </div>
 
-                    <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                        <h3>Soft Skills</h3>
-                        <div class="skill-items">
-                            <span class="skill-item">Communication</span>
-                            <span class="skill-item">Teaching</span>
-                            <span class="skill-item">Mentoring</span>
-                            <span class="skill-item">Leadership</span>
-                            <span class="skill-item">Problem Solving</span>
-                            <span class="skill-item">Technical Writing</span>
+                    <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="skill-card-header">
+                            <div class="skill-icon">🎯</div>
+                            <h3>Soft Skills</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Teaching</span>
+                            <span class="skill-tag">Mentoring</span>
+                            <span class="skill-tag">Leadership</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Technical Writing</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="blog" class="connect">
+        <section id="blog" class="blog">
             <div class="container">
-                <div class="connect-top">
-                    <span data-aos="fade-down" data-aos-duration="1000">
-                        <img src="img/blog.svg" alt="Modern tablet displaying blog content and articles" loading="lazy">
-                    </span>
-                </div>
-                <h1 data-aos="fade-up" class="hero">Blog</h1>
-                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I have published a number of interesting
-                    programming articles on <a target="_blank" style="color: #f7f7f7"
-                        href="https://ceffiong.medium.com/">Medium.</a> These
-                    articles
-                    covers topics such as
-                    full-stack
-                    web-development, databases and network programming. Go check them out, and don't forget to give me a
-                    👏clap, drop a ✍️ comment and ❤️ follow me for more updates.
-                </p>
-                <div class="socials">
-                    <span data-aos="fade-up" data-aos-duration="1000">
-                        <a class="visit-blog-btn" target="_blank" href="https://ceffiong.medium.com"> <img
-                                src="img/icons/medium_icon_white.svg" alt="Visit my blog" loading="lazy" />
-                            <span>Visit my blog</span></a>
-                    </span>
-                </div>
-            </div>
-        </section>
+                <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Blog</h1>
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I share insights and tutorials on
+                    software development through Medium, covering full-stack web development, mobile app development,
+                    databases, network programming, and modern development practices.</p>
 
-        <section id="mentor" class="connect section-background">
-            <div class="container">
-                <div class="connect-top">
-                    <span data-aos="fade-down" data-aos-duration="1000">
-                        <img src="img/mentoring.svg" alt="Mentor and student collaboration in software development learning" loading="lazy">
-                    </span>
-                </div>
-                <h1 data-aos="fade-up" class="hero">Mentoring</h1>
-                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm currently a Software Engineering Lead
-                    Mentor at <a style="color: #64ffda" target="_blank"
-                        href="https://www.masterschool.com/">Masterschool</a>, where I provide one-on-one mentoring and
-                    host live sessions for students. The program is a 14-month bootcamp designed to equip
-                    aspiring
-                    developers with the skills they need to land their first Software Engineering job. I'm passionate about
-                    guiding the next generation of engineers and helping them build a strong foundation for their careers.
-                </p>
+                <div class="blog-content">
+                    <div class="blog-topics" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="blog-topic-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="topic-icon">🚀</div>
+                            <h3>Full-Stack Development</h3>
+                            <p>End-to-end application development, from frontend frameworks to backend APIs and
+                                deployment strategies.</p>
+                        </div>
 
-                <div class="socials">
-                    <span data-aos="fade-up" data-aos-duration="1000">
-                        <a class="visit-blog-btn" target="_blank" href="https://www.masterschool.com/">
-                            <span>Masterschool</span></a>
-                    </span>
-                </div>
-            </div>
-        </section>
+                        <div class="blog-topic-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="topic-icon">📱</div>
+                            <h3>Mobile App Development</h3>
+                            <p>Building cross-platform mobile applications with React Native, navigation patterns, and
+                                mobile-first architecture.</p>
+                        </div>
 
-        <section id="connect" class="connect">
-            <div class="container">
-                <div class="connect-top">
-                    <span data-aos="fade-down" data-aos-duration="1000">
-                        <img src="img/contact_img.svg" alt="Modern smartphone with communication and contact icons" loading="lazy">
-                    </span>
-                </div>
-                <h1 data-aos="fade-up" class="hero">Connect</h1>
-                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm excited to connect and collaborate with
-                    you. Whether you have a
-                    project in mind, wish
-                    to discuss web/mobile development, or simply want to drop a friendly "hello," I'm all ears.
-                </p>
+                        <div class="blog-topic-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="topic-icon">🗄️</div>
+                            <h3>Databases & Architecture</h3>
+                            <p>Database design patterns, optimization techniques, and scalable system architecture
+                                approaches.</p>
+                        </div>
 
-                <form id="contact-form" class="contact-form" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <div class="blog-topic-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <div class="topic-icon">🌐</div>
+                            <h3>Network Programming</h3>
+                            <p>Building networked applications, understanding protocols, and implementing real-time
+                                communication.</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Send Message</button>
-                </form>
-                <div class="socials">
-                    <span data-aos="fade-up" data-aos-duration="1000">
-                        <a href="mailto:contact@ceffiong.dev"> <img src="img/icons/email.svg" alt="Send email to Charles" loading="lazy" />
+
+                    <div class="blog-cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                        <div class="blog-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Articles Published</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-number">10k+</span>
+                                <span class="stat-label">Readers</span>
+                            </div>
+                        </div>
+                        <a class="blog-button" target="_blank" href="https://ceffiong.medium.com">
+                            <img src="img/icons/medium_icon_white.svg" alt="Visit my blog" loading="lazy" />
+                            <span>Read My Articles</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </a>
-                    </span>
-                    <span data-aos="fade-up" data-aos-duration="1000">
-                        <a target="_blank" href="https://github.com/ceffiong"><img src="img/icons/github.svg"
-                                alt="Visit Charles's GitHub profile" loading="lazy" /></a>
-                    </span>
-                    <span data-aos="fade-up" data-aos-duration="1000">
-                        <a target="_blank" href="https://www.linkedin.com/in/ceffiong/"><img src="img/icons/linkedin.svg"
-                                alt="Connect with Charles on LinkedIn" loading="lazy" /></a>
-                    </span>
-                    <span data-aos="fade-up" data-aos-duration="1000">
-                        <a target="_blank" href="https://ceffiong.medium.com"><img src="img/icons/medium.svg"
-                                alt="Read Charles's articles on Medium" loading="lazy" /></a>
-                    </span>
+                    </div>
                 </div>
             </div>
-.
+        </section>
+
+        <section id="mentor" class="mentor">
+            <div class="container">
+                <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Teaching & Mentoring</h1>
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">I'm passionate about empowering the next
+                    generation of software engineers through education, mentorship, and hands-on guidance.</p>
+
+                <div class="mentor-content">
+                    <div class="mentor-role-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="role-badge">Current Role</div>
+                        <h2>Lead Mentor at Masterschool</h2>
+                        <p class="role-description">Guiding students through a comprehensive 14-month Software
+                            Engineering bootcamp designed to prepare them for their first tech role.</p>
+
+                        <div class="mentor-activities">
+                            <div class="activity-item">
+                                <div class="activity-icon">👥</div>
+                                <div>
+                                    <h4>One-on-One Mentoring</h4>
+                                    <p>Personalized guidance on coding challenges, career development, and technical
+                                        interview preparation.</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon">🎓</div>
+                                <div>
+                                    <h4>Live Sessions</h4>
+                                    <p>Interactive workshops covering full-stack development, best practices, and
+                                        real-world problem-solving.</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon">💼</div>
+                                <div>
+                                    <h4>Career Support</h4>
+                                    <p>Resume reviews, portfolio feedback, and strategies for landing that first
+                                        engineering position.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mentor-cta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <div class="mentor-stats">
+                            <div class="mentor-stat-item">
+                                <span class="mentor-stat-number">100+</span>
+                                <span class="mentor-stat-label">Students Mentored</span>
+                            </div>
+                            <div class="mentor-stat-divider"></div>
+                            <div class="mentor-stat-item">
+                                <span class="mentor-stat-number">14</span>
+                                <span class="mentor-stat-label">Month Program</span>
+                            </div>
+                        </div>
+                        <a class="mentor-button" target="_blank" href="https://www.masterschool.com/">
+                            <span>Learn About Masterschool</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect" class="connect-new">
+            <div class="container">
+                <h1 data-aos="fade-up" data-aos-duration="1000" class="hero">Let's Connect</h1>
+                <p data-aos="fade-up" data-aos-duration="1000" class="subhero">Have a project in mind or just want to
+                    chat? I'm always open to discussing new opportunities, collaborations, or simply connecting with
+                    fellow developers.</p>
+
+                <div class="connect-content">
+                    <div class="contact-info" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                        <div class="contact-card">
+                            <div class="contact-icon">📧</div>
+                            <h3>Email</h3>
+                            <a href="mailto:contact@ceffiong.dev">contact@ceffiong.dev</a>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Find Me Online</h3>
+                            <div class="social-buttons">
+                                <a href="https://github.com/ceffiong" target="_blank" class="social-btn">
+                                    <img src="img/icons/github.svg" alt="GitHub" loading="lazy" />
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ceffiong/" target="_blank" class="social-btn">
+                                    <img src="img/icons/linkedin.svg" alt="LinkedIn" loading="lazy" />
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://ceffiong.medium.com" target="_blank" class="social-btn">
+                                    <img src="img/icons/medium.svg" alt="Medium" loading="lazy" />
+                                    <span>Medium</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-new" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="form-header">
+                            <h2>Send Me a Message</h2>
+                            <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+                        </div>
+
+                        <form id="contact-form" class="form-new">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="What's this about?"
+                                    required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message"
+                                    placeholder="Tell me about your project or inquiry..." rows="6" required></textarea>
+                            </div>
+
+                            <button type="submit" class="form-submit">
+                                <span>Send Message</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        .
     </main>
 
-    <footer class="copyright">
+    <footer class="footer">
         <div class="container">
-            ©
-            <span id="copyright">
-                <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-            </span>
-            Charles | <a href="mailto:contact@ceffiong.dev">contact@ceffiong.dev</a> | Linz, Austria
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <div class="footer-logo-container">
+                        <div class="footer-logo"></div>
+                        <span class="footer-logo-text">Charles Dev</span>
+                    </div>
+                    <p class="footer-tagline">Building exceptional digital experiences through code, design, and
+                        innovation.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/ceffiong" target="_blank" class="footer-social-link"
+                            aria-label="GitHub">
+                            <img src="img/icons/github.svg" alt="GitHub" loading="lazy" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/ceffiong/" target="_blank" class="footer-social-link"
+                            aria-label="LinkedIn">
+                            <img src="img/icons/linkedin.svg" alt="LinkedIn" loading="lazy" />
+                        </a>
+                        <a href="https://ceffiong.medium.com" target="_blank" class="footer-social-link"
+                            aria-label="Medium">
+                            <img src="img/icons/medium.svg" alt="Medium" loading="lazy" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">More</h3>
+                    <ul class="footer-links">
+                        <li><a href="#mentor">Mentoring</a></li>
+                        <li><a href="#connect">Connect</a></li>
+                        <li><a href="https://ceffiong.medium.com" target="_blank">Articles</a></li>
+                        <li><a href="https://www.masterschool.com/" target="_blank">Masterschool</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Get in Touch</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="contact-icon-small">📧</span>
+                            <a href="mailto:contact@ceffiong.dev">contact@ceffiong.dev</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon-small">📍</span>
+                            <span>Austria</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © <span id="footer-year">
+                        <script>document.getElementById('footer-year').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                    </span> Charles Effiong. All rights reserved.
+                </div>
+                <div class="footer-built">
+                    <span>Built with passion and lots of ☕</span>
+                </div>
+            </div>
         </div>
     </footer>
 
-        <button onclick="topFunction()" id="btn-top"></button>
+    <button onclick="topFunction()" id="btn-top"></button>
     <script src="js/aos.js"></script>
     <script src="js/script.js"></script>
 </body>

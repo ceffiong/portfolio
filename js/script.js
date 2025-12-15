@@ -4,13 +4,14 @@ AOS.init({
 
 // Typewriter effect
 const typewriterElement = document.getElementById('typewriter');
+const typewriterAltElement = document.getElementById('typewriter-alt');
 const lines = [
-    { text: "Hi, I'm a", hasSpan: false },
-    { text: "Software", hasSpan: false },
-    { text: "Architect.", hasSpan: true }
+    { text: "Software Architect", hasSpan: false }
 ];
 let lineIndex = 0;
 let charIndex = 0;
+let lineIndexAlt = 0;
+let charIndexAlt = 0;
 
 function typeWriter() {
     if (lineIndex < lines.length) {
@@ -54,9 +55,52 @@ function typeWriter() {
     }
 }
 
+function typeWriterAlt() {
+    if (typewriterAltElement && lineIndexAlt < lines.length) {
+        const currentLine = lines[lineIndexAlt];
+
+        if (charIndexAlt < currentLine.text.length) {
+            const char = currentLine.text.charAt(charIndexAlt);
+
+            if (charIndexAlt === 0 && lineIndexAlt > 0) {
+                typewriterAltElement.innerHTML += '<br />';
+            }
+
+            if (currentLine.hasSpan && charIndexAlt === 0) {
+                typewriterAltElement.innerHTML += '<span>' + char;
+            } else if (currentLine.hasSpan && charIndexAlt === currentLine.text.length - 1) {
+                const lastSpan = typewriterAltElement.lastChild;
+                if (lastSpan && lastSpan.tagName === 'SPAN') {
+                    lastSpan.textContent += char;
+                } else {
+                    typewriterAltElement.innerHTML += char;
+                }
+                typewriterAltElement.innerHTML += '</span>';
+            } else if (currentLine.hasSpan) {
+                const lastSpan = typewriterAltElement.lastChild;
+                if (lastSpan && lastSpan.tagName === 'SPAN') {
+                    lastSpan.textContent += char;
+                } else {
+                    typewriterAltElement.innerHTML += char;
+                }
+            } else {
+                typewriterAltElement.innerHTML += char;
+            }
+
+            charIndexAlt++;
+            setTimeout(typeWriterAlt, 100);
+        } else {
+            lineIndexAlt++;
+            charIndexAlt = 0;
+            setTimeout(typeWriterAlt, 100);
+        }
+    }
+}
+
 // Start typewriter effect when page loads
 window.addEventListener('load', function() {
     setTimeout(typeWriter, 500);
+    setTimeout(typeWriterAlt, 500);
 });
 
 // Portfolio filtering
