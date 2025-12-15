@@ -144,4 +144,10 @@ window.addEventListener('scroll', function() {
     } else {
         header.classList.remove('scrolled');
     }
+
+    // Update scroll progress bar
+    const scrollProgress = document.querySelector('.scroll-progress-bar');
+    const scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / scrollableHeight) * 100;
+    scrollProgress.style.width = scrolled + '%';
 });

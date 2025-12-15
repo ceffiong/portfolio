@@ -77,6 +77,18 @@ header {
   transition: all 0.3s;
 }
 
+.scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #64ffda 0%, #4db8a8 100%);
+  width: 0%;
+  transition: width 0.1s ease-out;
+  z-index: 501;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
 header.scrolled {
   background: rgba(10, 25, 47, 0.95);
   box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
