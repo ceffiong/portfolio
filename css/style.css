@@ -720,30 +720,33 @@ header .container {
 
 .tech-icons {
   display: flex;
-  gap: 12px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 8px;
   flex-wrap: wrap;
 }
 
 .tech-icons i {
-  font-size: 28px;
-  transition: transform 0.3s;
+  font-size: 18px;
+  opacity: 0.5;
+  transition: all 0.3s;
+  color: #8892b0;
 }
 
 .tech-icon-svg {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.3s;
+  width: 18px;
+  height: 18px;
+  opacity: 0.5;
+  transition: all 0.3s;
 }
 
 .tech-icon-svg path {
-  fill: #ccd6f6;
+  fill: #8892b0;
 }
 
 .tech-icons i:hover,
 .tech-icon-svg:hover {
-  transform: translateY(-3px) scale(1.1);
+  opacity: 0.8;
 }
 
 .card-text {
