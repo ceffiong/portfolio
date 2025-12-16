@@ -334,37 +334,6 @@ header .container {
   margin-right: 0;
 }
 
-.hero-badges {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  background: rgba(100, 255, 218, 0.1);
-  border: 1px solid rgba(100, 255, 218, 0.3);
-  border-radius: 25px;
-  color: #64ffda;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-
-.hero-badge:hover {
-  background: rgba(100, 255, 218, 0.15);
-  border-color: rgba(100, 255, 218, 0.5);
-  transform: translateY(-2px);
-}
-
-.hero-badge svg {
-  flex-shrink: 0;
-}
-
 .hero-cta {
   display: flex;
   gap: 15px;
@@ -482,46 +451,6 @@ header .container {
   align-items: center;
 }
 
-.hero-image {
-  position: relative;
-  max-width: 500px;
-  width: 100%;
-  padding: 20px;
-}
-
-.image-decoration {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px solid rgba(100, 255, 218, 0.3);
-  border-radius: 20px;
-  z-index: 0;
-  transition: all 0.3s;
-}
-
-.hero-image:hover .image-decoration {
-  border-color: rgba(100, 255, 218, 0.5);
-  transform: scale(1.05);
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  position: relative;
-  z-index: 1;
-  mix-blend-mode: luminosity;
-  opacity: 0.8;
-  transition: all 0.3s;
-}
-
-.hero-image:hover img {
-  opacity: 0.9;
-  transform: scale(1.02);
-}
-
 @media (max-width: 1024px) {
   .home .container {
     gap: 40px;
@@ -575,10 +504,6 @@ header .container {
     max-width: 100%;
   }
 
-  .hero-badges {
-    justify-content: center;
-  }
-
   .hero-cta {
     justify-content: center;
   }
@@ -602,10 +527,6 @@ header .container {
   .home .right {
     order: -1;
   }
-
-  .hero-image {
-    max-width: 400px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -628,6 +549,269 @@ header .container {
   .cta-primary,
   .cta-secondary {
     width: 100%;
+  }
+}
+
+.hero-visual {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+}
+
+.visual-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(100, 255, 218, 0.3);
+  border-radius: 20px;
+  z-index: 0;
+  transition: all 0.3s;
+}
+
+.hero-visual:hover .visual-decoration {
+  border-color: rgba(100, 255, 218, 0.5);
+  transform: scale(1.05);
+}
+
+/* Floating geometric shapes */
+.shape {
+  position: absolute;
+  border-radius: 20px;
+  opacity: 0.6;
+  animation: floatShape 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.3), rgba(100, 255, 218, 0.1));
+  top: 10%;
+  left: 10%;
+  transform: rotate(25deg);
+  animation-delay: 0s;
+  border: 2px solid rgba(100, 255, 218, 0.4);
+}
+
+.shape-2 {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.2), rgba(100, 255, 218, 0.05));
+  top: 50%;
+  right: 10%;
+  transform: rotate(-15deg);
+  animation-delay: 1s;
+  border-radius: 50%;
+  border: 2px solid rgba(100, 255, 218, 0.3);
+}
+
+.shape-3 {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.25), rgba(100, 255, 218, 0.08));
+  bottom: 15%;
+  left: 20%;
+  transform: rotate(45deg);
+  animation-delay: 2s;
+  border: 2px solid rgba(100, 255, 218, 0.35);
+}
+
+.shape-4 {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.15), rgba(100, 255, 218, 0.03));
+  top: 30%;
+  right: 30%;
+  transform: rotate(-30deg);
+  animation-delay: 3s;
+  border-radius: 50%;
+  border: 2px solid rgba(100, 255, 218, 0.25);
+}
+
+.shape-5 {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.2), rgba(100, 255, 218, 0.06));
+  bottom: 35%;
+  right: 15%;
+  transform: rotate(60deg);
+  animation-delay: 4s;
+  border: 2px solid rgba(100, 255, 218, 0.3);
+}
+
+.shape-6 {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.18), rgba(100, 255, 218, 0.04));
+  top: 60%;
+  left: 5%;
+  transform: rotate(-20deg);
+  animation-delay: 1.5s;
+  border-radius: 50%;
+  border: 2px solid rgba(100, 255, 218, 0.28);
+}
+
+.shape-7 {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.22), rgba(100, 255, 218, 0.07));
+  bottom: 10%;
+  right: 35%;
+  transform: rotate(35deg);
+  animation-delay: 2.5s;
+  border: 2px solid rgba(100, 255, 218, 0.32);
+}
+
+.shape-8 {
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, rgba(100, 255, 218, 0.17), rgba(100, 255, 218, 0.05));
+  top: 40%;
+  left: 15%;
+  transform: rotate(-45deg);
+  animation-delay: 3.5s;
+  border-radius: 50%;
+  border: 2px solid rgba(100, 255, 218, 0.27);
+}
+
+@keyframes floatShape {
+  0%, 100% {
+    transform: translateY(0) rotate(var(--rotate, 0deg));
+  }
+  50% {
+    transform: translateY(-20px) rotate(calc(var(--rotate, 0deg) + 10deg));
+  }
+}
+
+/* Floating tech badges */
+.floating-badge {
+  position: absolute;
+  padding: 10px 20px;
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  border-radius: 25px;
+  color: #64ffda;
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  animation: floatBadge 4s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+}
+
+.badge-1 {
+  top: 20%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.badge-2 {
+  top: 10%;
+  right: 15%;
+  animation-delay: 0.8s;
+}
+
+.badge-3 {
+  top: 45%;
+  right: 5%;
+  animation-delay: 1.6s;
+}
+
+.badge-4 {
+  bottom: 25%;
+  left: 10%;
+  animation-delay: 2.4s;
+}
+
+.badge-5 {
+  bottom: 10%;
+  right: 25%;
+  animation-delay: 3.2s;
+}
+
+.badge-6 {
+  top: 65%;
+  left: 20%;
+  animation-delay: 0.4s;
+}
+
+.badge-7 {
+  top: 35%;
+  left: 5%;
+  animation-delay: 1.2s;
+}
+
+.badge-8 {
+  bottom: 30%;
+  right: 10%;
+  animation-delay: 2.8s;
+}
+
+@keyframes floatBadge {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-visual {
+    width: 400px;
+    height: 400px;
+  }
+
+  .shape-1 { width: 100px; height: 100px; }
+  .shape-2 { width: 70px; height: 70px; }
+  .shape-3 { width: 80px; height: 80px; }
+  .shape-4 { width: 50px; height: 50px; }
+  .shape-5 { width: 75px; height: 75px; }
+  .shape-6 { width: 60px; height: 60px; }
+  .shape-7 { width: 90px; height: 90px; }
+  .shape-8 { width: 55px; height: 55px; }
+
+  .floating-badge {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-visual {
+    width: 350px;
+    height: 350px;
+  }
+
+  .shape-1 { width: 80px; height: 80px; }
+  .shape-2 { width: 60px; height: 60px; }
+  .shape-3 { width: 70px; height: 70px; }
+  .shape-4 { width: 45px; height: 45px; }
+  .shape-5 { width: 65px; height: 65px; }
+  .shape-6 { width: 50px; height: 50px; }
+  .shape-7 { width: 75px; height: 75px; }
+  .shape-8 { width: 48px; height: 48px; }
+}
+
+@media (max-width: 480px) {
+  .hero-visual {
+    width: 280px;
+    height: 280px;
+  }
+
+  .shape-1 { width: 60px; height: 60px; }
+  .shape-2 { width: 45px; height: 45px; }
+  .shape-3 { width: 55px; height: 55px; }
+  .shape-4 { width: 35px; height: 35px; }
+  .shape-5 { width: 50px; height: 50px; }
+  .shape-6 { width: 42px; height: 42px; }
+  .shape-7 { width: 58px; height: 58px; }
+  .shape-8 { width: 38px; height: 38px; }
+
+  .floating-badge {
+    font-size: 11px;
+    padding: 6px 12px;
   }
 }
 
