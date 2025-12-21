@@ -2,109 +2,93 @@ AOS.init({
     once: true,
 });
 
-// Typewriter effect
+// ========================================
+// Typing Animation for Roles
+// ========================================
+
 const typewriterElement = document.getElementById('typewriter');
 const typewriterCenteredElement = document.getElementById('typewriter-centered');
-const lines = [
-    { text: "Software Architect", hasSpan: false }
+const titles = [
+    'Software Architect',
+    'Full-Stack Developer',
+    'GenAI Specialist',
+    'Tech Mentor',
+    'Mobile Developer'
 ];
-let lineIndex = 0;
+
+let titleIndex = 0;
 let charIndex = 0;
-let lineIndexCentered = 0;
+let isDeleting = false;
+let typingDelay = 150;
+
+function typeText() {
+    const currentTitle = titles[titleIndex];
+
+    if (isDeleting) {
+        typewriterElement.textContent = currentTitle.substring(0, charIndex - 1);
+        charIndex--;
+        typingDelay = 50;
+    } else {
+        typewriterElement.textContent = currentTitle.substring(0, charIndex + 1);
+        charIndex++;
+        typingDelay = 150;
+    }
+
+    if (!isDeleting && charIndex === currentTitle.length) {
+        // Pause at end
+        typingDelay = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        titleIndex = (titleIndex + 1) % titles.length;
+        typingDelay = 500;
+    }
+
+    setTimeout(typeText, typingDelay);
+}
+
+// Centered typewriter for home section
+let titleIndexCentered = 0;
 let charIndexCentered = 0;
+let isDeletingCentered = false;
+let typingDelayCentered = 150;
 
-function typeWriter() {
-    if (lineIndex < lines.length) {
-        const currentLine = lines[lineIndex];
+function typeTextCentered() {
+    if (!typewriterCenteredElement) return;
 
-        if (charIndex < currentLine.text.length) {
-            const char = currentLine.text.charAt(charIndex);
+    const currentTitle = titles[titleIndexCentered];
 
-            if (charIndex === 0 && lineIndex > 0) {
-                typewriterElement.innerHTML += '<br />';
-            }
-
-            if (currentLine.hasSpan && charIndex === 0) {
-                typewriterElement.innerHTML += '<span>' + char;
-            } else if (currentLine.hasSpan && charIndex === currentLine.text.length - 1) {
-                const lastSpan = typewriterElement.lastChild;
-                if (lastSpan && lastSpan.tagName === 'SPAN') {
-                    lastSpan.textContent += char;
-                } else {
-                    typewriterElement.innerHTML += char;
-                }
-                typewriterElement.innerHTML += '</span>';
-            } else if (currentLine.hasSpan) {
-                const lastSpan = typewriterElement.lastChild;
-                if (lastSpan && lastSpan.tagName === 'SPAN') {
-                    lastSpan.textContent += char;
-                } else {
-                    typewriterElement.innerHTML += char;
-                }
-            } else {
-                typewriterElement.innerHTML += char;
-            }
-
-            charIndex++;
-            setTimeout(typeWriter, 100);
-        } else {
-            lineIndex++;
-            charIndex = 0;
-            setTimeout(typeWriter, 100);
-        }
+    if (isDeletingCentered) {
+        typewriterCenteredElement.textContent = currentTitle.substring(0, charIndexCentered - 1);
+        charIndexCentered--;
+        typingDelayCentered = 50;
+    } else {
+        typewriterCenteredElement.textContent = currentTitle.substring(0, charIndexCentered + 1);
+        charIndexCentered++;
+        typingDelayCentered = 150;
     }
+
+    if (!isDeletingCentered && charIndexCentered === currentTitle.length) {
+        // Pause at end
+        typingDelayCentered = 2000;
+        isDeletingCentered = true;
+    } else if (isDeletingCentered && charIndexCentered === 0) {
+        isDeletingCentered = false;
+        titleIndexCentered = (titleIndexCentered + 1) % titles.length;
+        typingDelayCentered = 500;
+    }
+
+    setTimeout(typeTextCentered, typingDelayCentered);
 }
 
-function typeWriterCentered() {
-    if (typewriterCenteredElement && lineIndexCentered < lines.length) {
-        const currentLine = lines[lineIndexCentered];
-
-        if (charIndexCentered < currentLine.text.length) {
-            const char = currentLine.text.charAt(charIndexCentered);
-
-            if (charIndexCentered === 0 && lineIndexCentered > 0) {
-                typewriterCenteredElement.innerHTML += '<br />';
-            }
-
-            if (currentLine.hasSpan && charIndexCentered === 0) {
-                typewriterCenteredElement.innerHTML += '<span>' + char;
-            } else if (currentLine.hasSpan && charIndexCentered === currentLine.text.length - 1) {
-                const lastSpan = typewriterCenteredElement.lastChild;
-                if (lastSpan && lastSpan.tagName === 'SPAN') {
-                    lastSpan.textContent += char;
-                } else {
-                    typewriterCenteredElement.innerHTML += char;
-                }
-                typewriterCenteredElement.innerHTML += '</span>';
-            } else if (currentLine.hasSpan) {
-                const lastSpan = typewriterCenteredElement.lastChild;
-                if (lastSpan && lastSpan.tagName === 'SPAN') {
-                    lastSpan.textContent += char;
-                } else {
-                    typewriterCenteredElement.innerHTML += char;
-                }
-            } else {
-                typewriterCenteredElement.innerHTML += char;
-            }
-
-            charIndexCentered++;
-            setTimeout(typeWriterCentered, 100);
-        } else {
-            lineIndexCentered++;
-            charIndexCentered = 0;
-            setTimeout(typeWriterCentered, 100);
-        }
-    }
-}
-
-// Start typewriter effect when page loads
+// Start typing animations after page loads
 window.addEventListener('load', function() {
     // Force scroll to top on page load
     window.scrollTo(0, 0);
 
-    setTimeout(typeWriter, 500);
+    setTimeout(typeText, 500);
     if (typewriterCenteredElement) {
-        setTimeout(typeWriterCentered, 500);
+        setTimeout(typeTextCentered, 500);
     }
 });
 
@@ -320,7 +304,7 @@ if (firstFileItem) {
 // VS Code Centered Tabs functionality
 const tabsCentered = document.querySelectorAll('.vscode-tabs-centered .tab-centered');
 const tabContentsCentered = document.querySelectorAll('.editor-content-centered');
-const windowTitleCentered = document.querySelector('.home-centered .window-title');
+const windowTitleCentered = document.querySelector('.home .window-title');
 const fileItemsCentered = document.querySelectorAll('.file-item-centered');
 const tabsContainerCentered = document.querySelector('.vscode-tabs-centered');
 
@@ -497,3 +481,191 @@ window.addEventListener('scroll', function() {
     const scrolled = (window.scrollY / scrollableHeight) * 100;
     scrollProgress.style.width = scrolled + '%';
 });
+
+// ========================================
+// Animated Background - Floating Particles & Twinkling Stars
+// ========================================
+
+// Create floating particles
+const particlesContainer = document.querySelector('.floating-particles-container');
+const backgroundStars = document.querySelector('.background-stars');
+
+if (particlesContainer && backgroundStars) {
+    // Generate floating particles distributed across viewport
+    for (let i = 0; i < 15; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+
+        const size = Math.random() * 4 + 1; // 1-5px
+        const x = Math.random() * 100; // 0-100%
+        const y = Math.random() * 100; // 0-100% of viewport
+
+        const delay = Math.random() * 25; // 0-25s delay
+        const duration = Math.random() * 20 + 20; // 20-40s duration
+        const horizontalMovement = (Math.random() - 0.5) * 300; // -150 to 150px
+
+        particle.style.cssText = `
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}%;
+            top: ${y}%;
+            --tx: ${horizontalMovement}px;
+            animation: floatParticle ${duration}s infinite ease-in-out ${delay}s;
+        `;
+
+        particlesContainer.appendChild(particle);
+    }
+
+    // Generate twinkling stars across viewport
+    for (let i = 0; i < 50; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+
+        const x = Math.random() * 100; // 0-100%
+        const y = Math.random() * 100; // 0-100% of viewport
+
+        const delay = Math.random() * 8; // 0-8s delay
+        const duration = Math.random() * 4 + 2; // 2-6s duration
+
+        // Vary star sizes for depth
+        const size = Math.random() > 0.7 ? 3 : 2; // Some stars are bigger
+
+        star.style.cssText = `
+            left: ${x}%;
+            top: ${y}%;
+            width: ${size}px;
+            height: ${size}px;
+            --delay: ${delay}s;
+            --duration: ${duration}s;
+        `;
+
+        particlesContainer.appendChild(star);
+    }
+
+    // Add particle clusters in viewport
+    const clusterCount = 3;
+    for (let cluster = 0; cluster < clusterCount; cluster++) {
+        const clusterX = Math.random() * 80 + 10; // 10-90%
+        const clusterY = Math.random() * 100; // 0-100% of viewport
+
+        for (let i = 0; i < 3; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+
+            const size = Math.random() * 3 + 1.5;
+            const offsetX = (Math.random() - 0.5) * 25;
+            const offsetY = (Math.random() - 0.5) * 30; // Cluster within 30% height
+            const delay = Math.random() * 30;
+            const duration = Math.random() * 25 + 20;
+            const horizontalMovement = (Math.random() - 0.5) * 200;
+
+            particle.style.cssText = `
+                width: ${size}px;
+                height: ${size}px;
+                left: ${clusterX + offsetX}%;
+                top: ${clusterY + offsetY}%;
+                --tx: ${horizontalMovement}px;
+                animation: floatParticle ${duration}s infinite ease-in-out ${delay}s;
+            `;
+
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    console.log('✨ Total particles created:', particlesContainer?.children.length || 0);
+    console.log('🌟 Particles positioned in fixed viewport - visible across ALL sections');
+}
+
+// Add parallax effect to gradient spheres on scroll
+const gradientSpheres = document.querySelectorAll('.gradient-sphere');
+
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+
+    gradientSpheres.forEach((sphere, index) => {
+        const speed = (index + 1) * 0.1;
+        const yPos = scrolled * speed;
+        sphere.style.transform = `translateY(${yPos}px)`;
+    });
+});
+
+// Regenerate particles periodically for continuous effect
+setInterval(() => {
+    if (particlesContainer && particlesContainer.children.length < 80) {
+        // Add 1 particle at a time for very subtle continuous effect
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+
+        const size = Math.random() * 4 + 1;
+        const x = Math.random() * 100;
+        const y = Math.random() * 100; // Random position in viewport
+        const delay = 0;
+        const duration = Math.random() * 20 + 20;
+        const horizontalMovement = (Math.random() - 0.5) * 250;
+
+        particle.style.cssText = `
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}%;
+            top: ${y}%;
+            --tx: ${horizontalMovement}px;
+            animation: floatParticle ${duration}s ease-in-out ${delay}s;
+        `;
+
+        particlesContainer.appendChild(particle);
+
+        // Remove particle after animation completes
+        setTimeout(() => {
+            particle.remove();
+        }, (duration + delay) * 1000);
+    }
+}, 8000); // Add particle every 8 seconds
+
+console.log('✨ Starlight background with', particlesContainer?.children.length || 0, 'particles now visible everywhere!');
+
+// ========================================
+// Stats Counter Animation
+// ========================================
+
+function animateCounter(element, target, duration = 2000) {
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+
+        const displayValue = Math.floor(current);
+        if (element.textContent.includes('+')) {
+            element.textContent = displayValue + '+';
+        } else {
+            element.textContent = displayValue;
+        }
+    }, 16);
+}
+
+// Trigger counter animation when stats come into view
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+            entry.target.classList.add('counted');
+            const statNumbers = entry.target.querySelectorAll('.stat-number, .mentor-stat-number');
+
+            statNumbers.forEach(stat => {
+                const text = stat.textContent;
+                const num = parseInt(text.replace(/\D/g, ''));
+                if (!isNaN(num)) {
+                    animateCounter(stat, num);
+                }
+            });
+        }
+    });
+}, { threshold: 0.5 });
+
+// Observe stat sections
+const statSections = document.querySelectorAll('.hero-stats, .blog-stats, .mentor-stats');
+statSections.forEach(section => statsObserver.observe(section));
