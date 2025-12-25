@@ -1262,6 +1262,13 @@ header .container {
   margin-bottom: 30px;
 }
 
+/* Desktop: use portfolio subhero color */
+@media (min-width: 769px) {
+  .home .subhero {
+    color: #a8b5c9;
+  }
+}
+
 .home .hero-cta {
   display: flex;
   gap: 15px;
